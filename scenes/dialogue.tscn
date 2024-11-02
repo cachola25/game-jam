@@ -19,7 +19,8 @@ font_size = 2
 font_color = Color(0, 0, 0, 1)
 
 [node name="dialogue" type="Node2D"]
-position = Vector2(0, -63)
+position = Vector2(0, -175)
+scale = Vector2(2.5, 2.5)
 script = ExtResource("1_x3bad")
 
 [node name="ColorRect" type="ColorRect" parent="."]

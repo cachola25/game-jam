@@ -35,6 +35,8 @@ func _process(delta: float) -> void:
 		collider = collision_info.get_collider()
 		
 	if collider and Input.is_action_just_pressed("interact") and not talking:
+		if not collider is family_member:
+			return
 		start_conversation(collider)
 		talking = true
 		conversation_done = false
