@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bswtp6xt8pg6q"]
+[gd_scene load_steps=36 format=4 uid="uid://bswtp6xt8pg6q"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
 [ext_resource type="Texture2D" uid="uid://yl2m0r2e1jbi" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
@@ -19,8 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://c46rt7pokvoxn" path="res://scenes/family_members/girl_cousin.tscn" id="14_ncyia"]
 [ext_resource type="PackedScene" uid="uid://chacy0r45g5np" path="res://scenes/family_members/grandma.tscn" id="15_sduck"]
 [ext_resource type="PackedScene" uid="uid://bga1xfdps0aym" path="res://scenes/family_members/sister.tscn" id="18_6bw5m"]
-[ext_resource type="PackedScene" path="res://scripts/meal.tscn" id="20_2qdu5"]
-[ext_resource type="PackedScene" path="res://scripts/food.tscn" id="21_kvr8g"]
+[ext_resource type="Texture2D" uid="uid://mpc87sdtvsvi" path="res://assets/UI/input_square.png" id="19_yiyqn"]
+[ext_resource type="PackedScene" uid="uid://b2ibdj33setdr" path="res://scripts/meal.tscn" id="20_2qdu5"]
+[ext_resource type="FontFile" uid="uid://gfkblcn8idn" path="res://assets/04B_30__.TTF" id="20_urtj6"]
+[ext_resource type="PackedScene" uid="uid://dtiyehegxwa1g" path="res://scripts/food.tscn" id="21_kvr8g"]
 [ext_resource type="PackedScene" path="res://scripts/drank.tscn" id="22_3cg5x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
@@ -1175,9 +1177,18 @@ position = Vector2(149, 248)
 [node name="sister" parent="." instance=ExtResource("18_6bw5m")]
 position = Vector2(646, 272)
 
+[node name="Napkin" type="Sprite2D" parent="."]
+position = Vector2(89, 28)
+scale = Vector2(2.4375, 0.5625)
+texture = ExtResource("19_yiyqn")
+
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 31.0
+offset_top = 20.0
+offset_right = 71.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("20_urtj6")
 
 [node name="DeincrementTimer" type="Timer" parent="."]
 
