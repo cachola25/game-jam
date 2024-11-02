@@ -32,9 +32,9 @@ func _process(delta: float) -> void:
 	if is_talking:
 		is_talking = false
 		score += 30
-	#if score == 0:
-		#out_of_time = true
-		#get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")
+	if score == 0:
+		out_of_time = true
+		get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")
 
 func _on_deincrement_timer_timeout() -> void:
 	deincrement_score = true
