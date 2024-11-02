@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://doofkr8gwcksj"]
+
+[ext_resource type="Script" path="res://scripts/You.gd" id="1_y0bsv"]
+[ext_resource type="Texture2D" uid="uid://ncp3dubahtqs" path="res://Art/Characters/Main_Female.png" id="2_chiof"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umhr3"]
+size = Vector2(22.5, 21)
+
+[node name="You" type="CharacterBody2D"]
+script = ExtResource("1_y0bsv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 1.5)
+shape = SubResource("RectangleShape2D_umhr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 3)
+scale = Vector2(0.0545, 0.055)
+texture = ExtResource("2_chiof")
