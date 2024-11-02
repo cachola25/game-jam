@@ -66,6 +66,9 @@ func _on_player_response(family_npc, response):
 		uncle_dialogue_options(family_npc, response, msg)
 	elif family_npc is brother:
 		brother_dialogue_options(family_npc, response, msg)
+	elif family_npc is counsin_m:
+		cousin_m_dialogue_options(family_npc, response, msg)
+		
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -289,6 +292,30 @@ func brother_dialogue_options(family_npc, response, msg):
 		if response == "I have other things to worry about.":
 			msg.append("I trying to survive with out the help of mom and dad.")
 			msg.append("I have more important things to worry about other than whatever you and sister think.")
+			conversation_done = true
+			
+func cousin_m_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "I have, yes.":
+			msg.append("I have, actually. They're pretty interesting.")
+		elif response == "No, I don't have TikTok.":
+			msg.append("No, I don't have TikTok. I think it consumes too much time.")
+		msg.append("Either way, you're on that thing too much. I'm taking it.")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "It's for your own good.":
+			msg.append("Too much screen time can be bad for you.")
+			msg.append("If you can go the whole dinner without your iPad, I'll buy you a new toy.")
+		elif response == "You're too brainrotted.":
+			msg.append("You probably have 24 hours of screen time.")
+			msg.append("That's way too much, you definitely have brainrot.")
+			family_npc.curr_message += 1
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("I promise to give it back, good job.")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "Whatever...":
+			msg.append("Whatever, I don't like your mom anyways.")
 			conversation_done = true
 			
 func finish_conversation(family_npc):
