@@ -52,6 +52,8 @@ func _on_player_response(family_npc, response):
 		mom_dialogue_options(family_npc, response, msg)
 	elif family_npc is grandma:
 		grandma_dialogue_options(family_npc, response, msg)
+	elif family_npc is aunt:
+		aunt_dialogue_options(family_npc, response, msg)
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -106,6 +108,31 @@ func grandma_dialogue_options(family_npc, response, msg):
 		if response == "Ask that to your daughter.":
 			msg.append("Has your daughter ever learned how to cook?")
 			msg.append("She could barely take care of me.")
+			conversation_done = true
+			
+func aunt_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "Why are you dressed like that?":
+			msg.append("Not sure, but why do you always dress like a goblin?")
+		elif response == "Sorry, it's how I like to dress":
+			msg.append("I dress how I would like to.")
+			msg.append("I'm sorry if you think it's bad.")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "I try to live frugally.":
+			msg.append("I try to live well within my means.")
+			msg.append("Unlike your child whose mouth runs just as much as their spending issues.")
+			family_npc.curr_message += 1
+		elif response == "I am trying manage my debt well.":
+			msg.append("I am just trying to make sure I handle my debt before I take on more.")
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("Thanks, I'll try my best to keep budgeting.")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "Speaking of, how's your family?":
+			msg.append("When will you actually raise your own kids?")
+			msg.append("Instead of having your friends and husband do the work for you, ")
+			msg.append("all so you can go and drink with your friends.")
 			conversation_done = true
 			
 func finish_conversation(family_npc):
