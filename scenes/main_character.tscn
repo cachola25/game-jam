@@ -1,22 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bihir6cvi5k0v"]
+[gd_scene load_steps=4 format=3 uid="uid://doofkr8gwcksj"]
 
 [ext_resource type="Script" path="res://scripts/You.gd" id="1_y0bsv"]
-[ext_resource type="Texture2D" uid="uid://eac52a38tigu" path="res://assets/icon.svg" id="2_54inl"]
+[ext_resource type="Texture2D" uid="uid://myyy1f7t2rcf" path="res://assets/icon.svg" id="2_54inl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umhr3"]
 size = Vector2(130, 129)
 
-[node name="MainCharacter" type="Node2D"]
-
-[node name="You" type="CharacterBody2D" parent="."]
+[node name="You" type="CharacterBody2D"]
 script = ExtResource("1_y0bsv")
 
-[node name="Sprite2D" type="Sprite2D" parent="You"]
-position = Vector2(-1, 0)
-texture = ExtResource("2_54inl")
-
-[node name="Hitbox" type="Area2D" parent="You"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="You/Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_umhr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("2_54inl")
