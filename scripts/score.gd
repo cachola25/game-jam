@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		deincrement_score = false
 	if is_talking:
 		is_talking = false
-		score += 50
+		score += 30
 
 func _on_deincrement_timer_timeout() -> void:
 	deincrement_score = true
@@ -62,7 +62,7 @@ func _on_drank_2_canteat() -> void:
 
 
 func _on_consume_timer_timeout() -> void:
-	score += 7
+	score += 30
 	if drank1:
 		$Drank.queue_free()
 	elif drank2:

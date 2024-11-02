@@ -1,12 +1,12 @@
-[gd_scene load_steps=31 format=4 uid="uid://bswtp6xt8pg6q"]
+[gd_scene load_steps=34 format=4 uid="uid://bswtp6xt8pg6q"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
-[ext_resource type="Texture2D" uid="uid://yl2m0r2e1jbi" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
-[ext_resource type="Texture2D" uid="uid://gms6n5oja04o" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
-[ext_resource type="Texture2D" uid="uid://djfiu07h2w7xa" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
-[ext_resource type="Texture2D" uid="uid://ciwybyh5mmwi1" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
-[ext_resource type="Texture2D" uid="uid://cer8dwxp67e8g" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
-[ext_resource type="Texture2D" uid="uid://bys6db5s66r0v" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
+[ext_resource type="Texture2D" uid="uid://bsygd2fpmspbg" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
+[ext_resource type="Texture2D" uid="uid://bif6h84xp1p5q" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
+[ext_resource type="Texture2D" uid="uid://cidchbls6ysom" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
+[ext_resource type="Texture2D" uid="uid://kwp4ip7sjsnj" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
+[ext_resource type="Texture2D" uid="uid://dhpo1nyecuna4" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
+[ext_resource type="Texture2D" uid="uid://demq47p4xavbt" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
 [ext_resource type="PackedScene" uid="uid://doofkr8gwcksj" path="res://scenes/main_character.tscn" id="8_s1j23"]
 [ext_resource type="PackedScene" uid="uid://b1nusu7rguvr5" path="res://scenes/family_members/grandpa.tscn" id="9_0vo5f"]
 [ext_resource type="PackedScene" uid="uid://cghqgxmvroxw1" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
@@ -14,11 +14,14 @@
 [ext_resource type="PackedScene" uid="uid://y70w4mgya087" path="res://scenes/family_members/boy_cousin.tscn" id="9_iw5qa"]
 [ext_resource type="PackedScene" uid="uid://cr1ax7dt2173n" path="res://scenes/family_members/brother.tscn" id="9_pnfjp"]
 [ext_resource type="PackedScene" uid="uid://ct14xtxpobaie" path="res://scenes/family_members/uncle.tscn" id="9_vtbma"]
-[ext_resource type="AudioStream" uid="uid://caw5rrw08jrod" path="res://Audio/Chatter.mp3" id="10_wndwr"]
+[ext_resource type="AudioStream" uid="uid://k0a5seygftwt" path="res://Audio/Chatter.mp3" id="10_wndwr"]
 [ext_resource type="PackedScene" uid="uid://bdsow0c2c04ld" path="res://scenes/family_members/aunt.tscn" id="12_uf4tb"]
 [ext_resource type="PackedScene" uid="uid://c46rt7pokvoxn" path="res://scenes/family_members/girl_cousin.tscn" id="14_ncyia"]
 [ext_resource type="PackedScene" uid="uid://chacy0r45g5np" path="res://scenes/family_members/grandma.tscn" id="15_sduck"]
 [ext_resource type="PackedScene" uid="uid://bga1xfdps0aym" path="res://scenes/family_members/sister.tscn" id="18_6bw5m"]
+[ext_resource type="PackedScene" uid="uid://b2ibdj33setdr" path="res://scripts/meal.tscn" id="20_2qdu5"]
+[ext_resource type="PackedScene" uid="uid://dtiyehegxwa1g" path="res://scripts/food.tscn" id="21_kvr8g"]
+[ext_resource type="PackedScene" path="res://scripts/drank.tscn" id="22_3cg5x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
 texture = ExtResource("2_80qsc")
@@ -1187,5 +1190,43 @@ parameters/looping = true
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_xgnpd")
 
+[node name="Drank" parent="." instance=ExtResource("20_2qdu5")]
+position = Vector2(406, 216)
+
+[node name="Drank2" parent="." instance=ExtResource("20_2qdu5")]
+position = Vector2(40, 324)
+
+[node name="Drank3" parent="." instance=ExtResource("20_2qdu5")]
+position = Vector2(629, 218)
+
+[node name="Drank4" parent="." instance=ExtResource("21_kvr8g")]
+position = Vector2(223, 322)
+
+[node name="Drank5" parent="." instance=ExtResource("21_kvr8g")]
+position = Vector2(482, 289)
+
+[node name="Drank6" parent="." instance=ExtResource("22_3cg5x")]
+position = Vector2(219, 218)
+
+[node name="Drank7" parent="." instance=ExtResource("22_3cg5x")]
+position = Vector2(693, 292)
+
+[node name="ConsumeTimer" type="Timer" parent="."]
+
 [connection signal="talk" from="MainCharacter" to="." method="_on_main_character_talk"]
 [connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]
+[connection signal="caneat" from="Drank" to="." method="_on_drank_caneat"]
+[connection signal="canteat" from="Drank" to="." method="_on_drank_canteat"]
+[connection signal="caneat" from="Drank2" to="." method="_on_drank_2_caneat"]
+[connection signal="canteat" from="Drank2" to="." method="_on_drank_2_canteat"]
+[connection signal="caneat" from="Drank3" to="." method="_on_drank_3_caneat"]
+[connection signal="canteat" from="Drank3" to="." method="_on_drank_3_canteat"]
+[connection signal="caneat" from="Drank4" to="." method="_on_drank_4_caneat"]
+[connection signal="canteat" from="Drank4" to="." method="_on_drank_4_canteat"]
+[connection signal="caneat" from="Drank5" to="." method="_on_drank_5_caneat"]
+[connection signal="canteat" from="Drank5" to="." method="_on_drank_5_canteat"]
+[connection signal="caneat" from="Drank6" to="." method="_on_drank_6_caneat"]
+[connection signal="canteat" from="Drank6" to="." method="_on_drank_6_canteat"]
+[connection signal="caneat" from="Drank7" to="." method="_on_drank_7_caneat"]
+[connection signal="canteat" from="Drank7" to="." method="_on_drank_7_canteat"]
+[connection signal="timeout" from="ConsumeTimer" to="." method="_on_consume_timer_timeout"]

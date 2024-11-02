@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://csxycegdmxg1v"]
+[gd_scene load_steps=4 format=3 uid="uid://b2ibdj33setdr"]
 
 [ext_resource type="PackedScene" uid="uid://dtiyehegxwa1g" path="res://scripts/food.tscn" id="1_qpa37"]
 [ext_resource type="Texture2D" uid="uid://ddhnv1x4lfy6r" path="res://Art/Top-Down_Retro_Interior/food.png" id="2_35udx"]
