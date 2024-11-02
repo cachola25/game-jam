@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfgfrwgakni8v"]
+[gd_scene load_steps=5 format=3 uid="uid://dfgfrwgakni8v"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_16f08"]
 [ext_resource type="Texture2D" uid="uid://chu2kgyq4jq30" path="res://assets/ThanksgivingBackground.png" id="2_2115m"]
 [ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="3_ep0xp"]
+[ext_resource type="AudioStream" uid="uid://bcgcuxjxj88mk" path="res://Audio/Happy sounds.mp3" id="4_ta6ee"]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_16f08")
@@ -41,6 +42,10 @@ offset_bottom = 410.0
 theme_override_fonts/font = ExtResource("3_ep0xp")
 theme_override_font_sizes/font_size = 200
 text = "Kin Konflict"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ta6ee")
+autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
