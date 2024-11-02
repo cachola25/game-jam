@@ -60,6 +60,8 @@ func _on_player_response(family_npc, response):
 		cousin_f_dialogue_options(family_npc, response, msg)
 	elif family_npc is dad:
 		dad_dialogue_options(family_npc, response, msg)
+	elif family_npc is grandpa:
+		grandpa_dialogue_options(family_npc, response, msg)
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -206,6 +208,32 @@ func dad_dialogue_options(family_npc, response, msg):
 	elif family_npc.curr_message - 1 == 3:
 		if response == "Life is full of surprises.":
 			msg.append("Life is always full of surprises, I am sure you're aware of that.")
+			conversation_done = true
+			
+func grandpa_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "Nope, just trying to make it big.":
+			msg.append("Nope, just trying to survive by investing my money.")
+			msg.append("In DogeCoin and Day trading...")
+		elif response == "Just trying to find a job.":
+			msg.append("I wish, I've applied to 100 jobs.")
+			msg.append("I ended up being ghosted by 80 and scammed by 20")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "I'll be able to afford it soon.":
+			msg.append("Don't worry, grandpa. I'll be able to afford it soon.")
+			msg.append("Just don't write me out of your will.")
+			family_npc.curr_message += 1
+		elif response == "Everything is taken and expensive.":
+			msg.append("I wish I was able to do this.")
+			msg.append("Houses cost an arm and a leg and raising kids takes the head and shoulders.")
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("Whatever grandpa, I'll see you next year.")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "Not now, grandpa...":
+			msg.append("Get with the times, grandpa.")
+			msg.append("I don't have time for this today, goodbye.")
 			conversation_done = true
 			
 func finish_conversation(family_npc):
