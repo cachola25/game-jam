@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4r6ushs3mnvy"]
+
+[ext_resource type="Texture2D" uid="uid://iki4mrgpdtc3" path="res://assets/UI/input_square.png" id="1_rr7me"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cqxfi"]
+font_size = 2
+font_color = Color(0, 0, 0, 1)
+
+[node name="player_dialogue" type="Node2D"]
+scale = Vector2(0.987399, 1.00907)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = 172.0
+offset_top = -38.0
+offset_right = 212.0
+offset_bottom = 2.0
+
+[node name="next_char" type="Timer" parent="."]
+
+[node name="next_message" type="Timer" parent="."]
+
+[node name="talking" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 44.0
+offset_bottom = 22.0
+
+[node name="talking_bg" type="Sprite2D" parent="talking"]
+scale = Vector2(1.57244, 0.729051)
+texture = ExtResource("1_rr7me")
+
+[node name="talking_message" type="Label" parent="talking"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -6.0
+offset_right = 17.0
+offset_bottom = 6.0
+label_settings = SubResource("LabelSettings_cqxfi")
+autowrap_mode = 2

@@ -5,6 +5,10 @@ const SPEED = 300.0
 var talking = false
 var collider
 signal talk
+
+func _ready() -> void:
+	$player_dialogue.visible = false
+	
 func _process(delta: float) -> void:
 		
 	var direction = Vector2.ZERO # (0,0d)
@@ -25,9 +29,11 @@ func _process(delta: float) -> void:
 	if collision_info and not talking:
 		collider = collision_info.get_collider()
 		
-	if collider and Input.is_action_just_pressed("interact"):
+	if collider and Input.is_action_just_pressed("interact") and not talking:
 		start_conversation(collider)
 		talking = true
 		talk.emit()
+		
 func start_conversation(family_member):
 	family_member.get_node("dialogue").start_dialogue(family_member.messages)
+	

@@ -51,7 +51,7 @@ texture = ExtResource("2_x5ulu")
 [node name="talking_message" type="Label" parent="talking"]
 layout_mode = 0
 offset_left = -17.0
-offset_top = 28.0
+offset_top = 29.0
 offset_right = 16.0
 offset_bottom = 41.0
 label_settings = SubResource("LabelSettings_pa6md")
@@ -72,6 +72,7 @@ scale = Vector2(0.197917, 0.0694099)
 texture = ExtResource("3_ad5qx")
 
 [node name="response_1_text" type="Label" parent="response_1"]
+layout_mode = 0
 offset_top = -1.0
 offset_right = 36.0
 offset_bottom = 3.0
@@ -105,6 +106,7 @@ scale = Vector2(0.199219, 0.0664062)
 texture = ExtResource("3_ad5qx")
 
 [node name="response_2_text" type="Label" parent="response_2"]
+layout_mode = 0
 offset_left = -10.0
 offset_top = -5.0
 offset_right = 26.0
@@ -139,6 +141,7 @@ scale = Vector2(0.197917, 0.0664062)
 texture = ExtResource("3_ad5qx")
 
 [node name="response_3_text" type="Label" parent="response_3"]
+layout_mode = 0
 offset_left = -153.0
 offset_top = 68.0
 offset_right = -117.0

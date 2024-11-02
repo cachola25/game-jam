@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://doofkr8gwcksj"]
+[gd_scene load_steps=5 format=3 uid="uid://doofkr8gwcksj"]
 
 [ext_resource type="Script" path="res://scripts/You.gd" id="1_y0bsv"]
 [ext_resource type="Texture2D" uid="uid://myyy1f7t2rcf" path="res://assets/icon.svg" id="2_54inl"]
+[ext_resource type="PackedScene" uid="uid://c4r6ushs3mnvy" path="res://scenes/player_dialogue.tscn" id="3_lla3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umhr3"]
 size = Vector2(52, 46)
@@ -17,3 +18,7 @@ shape = SubResource("RectangleShape2D_umhr3")
 position = Vector2(3.8147e-06, 1)
 scale = Vector2(0.390625, 0.34375)
 texture = ExtResource("2_54inl")
+
+[node name="player_dialogue" parent="." instance=ExtResource("3_lla3m")]
+visible = false
+position = Vector2(0, -50)

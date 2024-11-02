@@ -43,3 +43,8 @@ frame_progress = 0.529403
 
 [node name="dialogue" parent="." instance=ExtResource("3_u5w5k")]
 position = Vector2(0, -80)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
