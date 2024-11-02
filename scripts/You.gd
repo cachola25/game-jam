@@ -58,6 +58,8 @@ func _on_player_response(family_npc, response):
 		sister_dialogue_options(family_npc, response, msg)
 	elif family_npc is cousin_f:
 		cousin_f_dialogue_options(family_npc, response, msg)
+	elif family_npc is dad:
+		dad_dialogue_options(family_npc, response, msg)
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -181,6 +183,29 @@ func cousin_f_dialogue_options(family_npc, response, msg):
 	elif family_npc.curr_message - 1 == 3:
 		if response == "Don't you have veneers?":
 			msg.append("I wouldn't be talking, I'm not the one whose teeth are fake.")
+			conversation_done = true
+
+func dad_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "Sorry, I always forget.":
+			msg.append("Sometimes, I forget.")
+			msg.append("Especially, when I am not at my own place.")
+		elif response == "Yup, only at my place.":
+			msg.append("I only do it at my place, I like spending your money.")
+			msg.append("Just like my sister.")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "When the economy improves.":
+			msg.append("When the economy is not so terrible, hopefully.")
+			family_npc.curr_message += 1
+		elif response == "Don't you hate your job?":
+			msg.append("When are you going to realize how unhappy you are at your \"good job\"")
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("I'd rather be happy and poor than sad and rich.")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "Life is full of surprises.":
+			msg.append("Life is always full of surprises, I am sure you're aware of that.")
 			conversation_done = true
 			
 func finish_conversation(family_npc):
