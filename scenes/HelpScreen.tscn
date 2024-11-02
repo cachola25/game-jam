@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/HelpScreen.gd" id="1_pb1ug"]
 [ext_resource type="Texture2D" uid="uid://b2aw0ylwun5ci" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="2_05bfp"]
-[ext_resource type="Texture2D" uid="uid://bn6gfjlgkvoni" path="res://assets/Green.jpg" id="3_6fg4f"]
+[ext_resource type="Texture2D" uid="uid://bn6gfjlgkvoni" path="res://Green.jpg" id="3_6fg4f"]
 [ext_resource type="FontFile" uid="uid://bhi6tpsqkrkmc" path="res://assets/04B_30__.TTF" id="4_bk743"]
 
 [node name="HelpScreen" type="Node2D"]
