@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bswtp6xt8pg6q"]
+[gd_scene load_steps=20 format=4 uid="uid://bswtp6xt8pg6q"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
 [ext_resource type="Texture2D" uid="uid://yl2m0r2e1jbi" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bys6db5s66r0v" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
 [ext_resource type="PackedScene" uid="uid://doofkr8gwcksj" path="res://scenes/main_character.tscn" id="8_s1j23"]
 [ext_resource type="PackedScene" uid="uid://y70w4mgya087" path="res://scenes/family_members/boy_cousin.tscn" id="9_iw5qa"]
+[ext_resource type="PackedScene" uid="uid://cr1ax7dt2173n" path="res://scenes/family_members/brother.tscn" id="9_pnfjp"]
 [ext_resource type="AudioStream" uid="uid://caw5rrw08jrod" path="res://Audio/Chatter.mp3" id="10_wndwr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
@@ -961,6 +962,8 @@ position = Vector2(411, 341)
 
 [node name="boy_cousin" parent="." instance=ExtResource("9_iw5qa")]
 position = Vector2(159, 277)
+
+[node name="brother" parent="." instance=ExtResource("9_pnfjp")]
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
