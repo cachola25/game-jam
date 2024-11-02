@@ -1,39 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://daqms26yrmocr"]
+[gd_scene load_steps=9 format=3 uid="uid://daqms26yrmocr"]
 
 [ext_resource type="Script" path="res://scripts/EndScreen.gd" id="1_whtnr"]
-[ext_resource type="Texture2D" uid="uid://bnp4wpd3hyidb" path="res://Art/Background.png" id="2_stk01"]
-[ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="3_kynsj"]
-[ext_resource type="AudioStream" uid="uid://bvql1f3odixcq" path="res://Audio/SadViolin.mp3" id="4_ff6t6"]
+[ext_resource type="Texture2D" uid="uid://dxkh1ap04rxig" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="2_n0vbn"]
+[ext_resource type="Texture2D" uid="uid://eoamq67v4hwd" path="res://Art/Characters/Start.png" id="3_yemxx"]
+[ext_resource type="Texture2D" uid="uid://dc7s6m7p17e4k" path="res://Art/Characters/Quit.png" id="4_1mo36"]
+[ext_resource type="AudioStream" uid="uid://cg8pxhstcjrew" path="res://Audio/SadViolin.mp3" id="4_ff6t6"]
+[ext_resource type="FontFile" uid="uid://d4afo47fml43o" path="res://assets/04B_30__.TTF" id="5_bp67t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_23rmn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r5ktu"]
 
 [node name="EndScreen" type="Node2D"]
 script = ExtResource("1_whtnr")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(350, 192)
-scale = Vector2(0.911458, 0.75)
-texture = ExtResource("2_stk01")
+position = Vector2(351.771, 191.562)
+scale = Vector2(0.175614, 0.169278)
+texture = ExtResource("2_n0vbn")
 
 [node name="RestartButton" type="Button" parent="."]
-offset_left = 178.0
-offset_top = 285.0
-offset_right = 309.0
-offset_bottom = 344.0
-text = "Restart"
+offset_left = 190.0
+offset_top = 159.0
+offset_right = 382.0
+offset_bottom = 267.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_23rmn")
+icon = ExtResource("3_yemxx")
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 396.0
-offset_top = 286.0
-offset_right = 528.0
-offset_bottom = 345.0
-text = "Quit"
+offset_left = 377.0
+offset_top = 161.0
+offset_right = 569.0
+offset_bottom = 269.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r5ktu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_r5ktu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r5ktu")
+icon = ExtResource("4_1mo36")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 25.0
-offset_top = 111.0
-offset_right = 687.0
-offset_bottom = 230.0
-theme_override_fonts/font = ExtResource("3_kynsj")
-theme_override_font_sizes/font_size = 110
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 1473.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0.745098, 0.345098, 0, 1)
+theme_override_fonts/font = ExtResource("5_bp67t")
+theme_override_font_sizes/font_size = 50
 text = "Face them again?"
 
 [node name="SadSound" type="AudioStreamPlayer" parent="."]

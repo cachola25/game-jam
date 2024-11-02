@@ -6,6 +6,7 @@ extends Node2D
 @onready var deincrement_score
 @onready var ate
 @onready var drank
+@onready var NPCs = [$boy_cousin, $brother, $uncle, $aunt, $dad, $girl_cousin, $grandma, $grandpa, $mom, $sister]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	score = 60
@@ -31,15 +32,9 @@ func _on_deincrement_timer_timeout() -> void:
 	deincrement_score = true
 	$DeincrementTimer.start()
 	
-
-
 func _on_main_character_talk() -> void:
 	is_talking = true
-
-
-func _on_drank_caneat() -> void:
-	pass # Replace with function body.
-
-
-func _on_drank_canteat() -> void:
-	pass # Replace with function body.
+	
+func clear_indicators():
+	for npc in NPCs:
+		npc.get_node("indicator").visible = false

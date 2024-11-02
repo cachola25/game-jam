@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+class_name player
+
+const SPEED = 100.0
 
 var talking = false
 var conversation_done = true
@@ -33,7 +35,14 @@ func _process(delta: float) -> void:
 	var collision_info = move_and_collide(direction * SPEED * delta)
 	if collision_info and not talking:
 		collider = collision_info.get_collider()
-		
+	else:
+		collider = null
+	
+	if collider and collider is family_member:
+		get_parent().clear_indicators()
+		collider.get_node("indicator").visible = true
+	else:
+		get_parent().clear_indicators()
 	if collider and Input.is_action_just_pressed("interact") and not talking:
 		if not collider is family_member:
 			return

@@ -8,8 +8,8 @@
 size = Vector2(20, 17)
 
 [node name="You" type="CharacterBody2D"]
-collision_layer = 1023
-collision_mask = 1023
+collision_layer = 2047
+collision_mask = 2047
 script = ExtResource("1_y0bsv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -25,7 +25,7 @@ texture = ExtResource("2_chiof")
 position = Vector2(0, -50)
 
 [node name="response_timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 2.0
 one_shot = true
 
 [connection signal="timeout" from="response_timer" to="." method="_on_response_timer_timeout"]

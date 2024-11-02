@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://y70w4mgya087"]
+[gd_scene load_steps=9 format=3 uid="uid://y70w4mgya087"]
 
 [ext_resource type="Script" path="res://scripts/family_members/boy_cousin.gd" id="1_8ceai"]
-[ext_resource type="Texture2D" uid="uid://cfak2uq13hfui" path="res://Art/Characters/Custom_Characters.png" id="1_rb178"]
+[ext_resource type="Texture2D" uid="uid://c6hcm76i3ln7n" path="res://Art/Characters/Custom_Characters.png" id="1_rb178"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="2_5yo8c"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvrn1"]
-size = Vector2(13.2515, 15.8233)
+[ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="4_w6k8b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_213s5"]
 atlas = ExtResource("1_rb178")
@@ -29,22 +27,31 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvrn1"]
+size = Vector2(14.6742, 16.4035)
+
 [node name="boy_cousin" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_8ceai")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.161604, 0.104685)
-shape = SubResource("RectangleShape2D_pvrn1")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(5.96046e-08, 0)
 scale = Vector2(0.172377, 0.193913)
 sprite_frames = SubResource("SpriteFrames_f3mtl")
 animation = &"walking"
 frame_progress = 0.502628
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.49012e-08)
+scale = Vector2(1, 0.999999)
+shape = SubResource("RectangleShape2D_pvrn1")
+
+[node name="indicator" parent="." instance=ExtResource("4_w6k8b")]
+position = Vector2(0, -13)
+
 [node name="dialogue" parent="." instance=ExtResource("2_5yo8c")]
+visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true

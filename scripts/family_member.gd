@@ -4,7 +4,7 @@ class_name family_member
 
 signal chosen_response
 
-const SPEED = 100
+const SPEED = 60
 
 var talking = false  # Indicates whether the NPC is currently talking
 
@@ -14,6 +14,7 @@ func _ready() -> void:
 	$NavigationAgent2D.connect("velocity_computed", _on_navigation_agent_2d_velocity_computed)
 	$dialogue/response_1/response_button.connect("pressed", _on_response_1_button_pressed)
 	$dialogue/response_2/response_button.connect("pressed", _on_response_2_button_pressed)
+	$indicator.visible = false
 	# Delay the initial pathfinding to allow the navigation map to synchronize
 	call_deferred("start_navigation")
 
