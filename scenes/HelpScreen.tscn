@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0kkphx8astp0"]
+
+[ext_resource type="Script" path="res://scripts/HelpScreen.gd" id="1_pb1ug"]
+[ext_resource type="Texture2D" uid="uid://chu2kgyq4jq30" path="res://assets/ThanksgivingBackground.png" id="2_kgknn"]
+[ext_resource type="Texture2D" uid="uid://bk6v2vkdnr7nm" path="res://assets/Napkin.png" id="3_vo25u"]
+[ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="4_51mfi"]
+
+[node name="HelpScreen" type="Node2D"]
+script = ExtResource("1_pb1ug")
+
+[node name="ThanksgivingBackground" type="Sprite2D" parent="."]
+position = Vector2(350, 192.001)
+scale = Vector2(0.911458, 0.749997)
+texture = ExtResource("2_kgknn")
+
+[node name="Napkin" type="Sprite2D" parent="."]
+position = Vector2(349.5, 191)
+scale = Vector2(0.686458, 0.657993)
+texture = ExtResource("3_vo25u")
+
+[node name="Description" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 88.0
+offset_right = 1070.0
+offset_bottom = 535.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_51mfi")
+theme_override_font_sizes/font_size = 28
+text = "Welcome! To thanksgiving with your family. You may try to make it 
+without talking to your squabbling relatives but time is of the essence and
+if you don't talk to everyone, you may not make it to dinner....
+
+WASD  - Move in corresponding direction
+
+Click - Choose an option when talking to a disgruntled family member
+
+E - Interact
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Help" type="Label" parent="."]
+offset_left = 281.0
+offset_top = 14.0
+offset_right = 451.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_51mfi")
+theme_override_font_sizes/font_size = 80
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
+[node name="ReturnButton" type="Button" parent="."]
+offset_left = 547.0
+offset_top = 307.0
+offset_right = 671.0
+offset_bottom = 359.0
+text = "Return
+"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]

@@ -1,23 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://daqms26yrmocr"]
+[gd_scene load_steps=5 format=3 uid="uid://daqms26yrmocr"]
 
 [ext_resource type="Script" path="res://scripts/EndScreen.gd" id="1_whtnr"]
+[ext_resource type="Texture2D" uid="uid://bnp4wpd3hyidb" path="res://Art/Background.png" id="2_stk01"]
+[ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="3_kynsj"]
+[ext_resource type="AudioStream" uid="uid://bvql1f3odixcq" path="res://Audio/SadViolin.mp3" id="4_ff6t6"]
 
 [node name="EndScreen" type="Node2D"]
 script = ExtResource("1_whtnr")
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(350, 192)
+scale = Vector2(0.911458, 0.75)
+texture = ExtResource("2_stk01")
+
 [node name="RestartButton" type="Button" parent="."]
-offset_left = 268.0
-offset_top = 424.0
-offset_right = 479.0
-offset_bottom = 499.0
+offset_left = 178.0
+offset_top = 285.0
+offset_right = 309.0
+offset_bottom = 344.0
 text = "Restart"
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 701.0
-offset_top = 430.0
-offset_right = 912.0
-offset_bottom = 505.0
+offset_left = 396.0
+offset_top = 286.0
+offset_right = 528.0
+offset_bottom = 345.0
 text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 111.0
+offset_right = 687.0
+offset_bottom = 230.0
+theme_override_fonts/font = ExtResource("3_kynsj")
+theme_override_font_sizes/font_size = 110
+text = "Face them again?"
+
+[node name="SadSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ff6t6")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
