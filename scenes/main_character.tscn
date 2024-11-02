@@ -5,22 +5,21 @@
 [ext_resource type="PackedScene" uid="uid://c4r6ushs3mnvy" path="res://scenes/player_dialogue.tscn" id="3_lla3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umhr3"]
-size = Vector2(22.5, 21)
+size = Vector2(20, 17)
 
 [node name="You" type="CharacterBody2D"]
 script = ExtResource("1_y0bsv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, 1.5)
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_umhr3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(9.53674e-07, 3)
-scale = Vector2(0.0545, 0.055)
+position = Vector2(-2.38419e-07, -2.98023e-08)
+scale = Vector2(0.04525, 0.0415)
 texture = ExtResource("2_chiof")
 
 [node name="player_dialogue" parent="." instance=ExtResource("3_lla3m")]
-visible = false
 position = Vector2(0, -50)
 
 [node name="response_timer" type="Timer" parent="."]
