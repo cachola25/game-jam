@@ -23,7 +23,7 @@ var messages = [
 var player_responses = [
 	[
 		"Why are you dressed like that?",
-		"Sorry, it's how I like to dress" 
+		"Sorry, it's how I like to dress." 
 	],
 	[
 		"I try to live frugally.",

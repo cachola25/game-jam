@@ -54,6 +54,8 @@ func _on_player_response(family_npc, response):
 		grandma_dialogue_options(family_npc, response, msg)
 	elif family_npc is aunt:
 		aunt_dialogue_options(family_npc, response, msg)
+	elif family_npc is sister:
+		sister_dialogue_options(family_npc, response, msg)
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -133,6 +135,28 @@ func aunt_dialogue_options(family_npc, response, msg):
 			msg.append("When will you actually raise your own kids?")
 			msg.append("Instead of having your friends and husband do the work for you, ")
 			msg.append("all so you can go and drink with your friends.")
+			conversation_done = true
+
+func sister_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "I'm making my own salary.":
+			msg.append("Well, my salary doesn't come from mom and dad.")
+			msg.append("It's from a real job.")
+		elif response == "You must be a kind person.":
+			msg.append("I'm sure it's because you're a kind person everyone would just love to hire you!")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "Yeah, you're right...":
+			msg.append("Yup, not a great failure like you.")
+			family_npc.curr_message += 1
+		elif response == "I think that's a good thing.":
+			msg.append("I would gladly not end up to be whatever a \"great child\" is in your eyes.")
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("And you can continue being a leech.")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "Working at NASA is pretty cool.":
+			msg.append("If working for NASA isn't special, then shouldn't you ask yourself the same thing?")
 			conversation_done = true
 			
 func finish_conversation(family_npc):

@@ -1,3 +1,48 @@
-[gd_scene format=3 uid="uid://bga1xfdps0aym"]
+[gd_scene load_steps=8 format=3 uid="uid://bga1xfdps0aym"]
 
-[node name="sister" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://cm7jkp85tq5wc" path="res://assets/family_members_temp/roguelikeChar_transparent.png" id="1_0hg6i"]
+[ext_resource type="Script" path="res://scripts/family_members/sister.gd" id="1_csqa0"]
+[ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_oe30e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ad1k"]
+size = Vector2(18.0995, 16.1781)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veggp"]
+atlas = ExtResource("1_0hg6i")
+region = Rect2(0, 0, 17, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2dp8"]
+atlas = ExtResource("1_0hg6i")
+region = Rect2(17, 0, 17, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2fk65"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_veggp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2dp8")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="sister" type="CharacterBody2D"]
+scale = Vector2(3.094, 2.818)
+script = ExtResource("1_csqa0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.323206, 0.0727464)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_0ad1k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2fk65")
+animation = &"walking"
+
+[node name="dialogue" parent="." instance=ExtResource("1_oe30e")]
+position = Vector2(0, -80)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
