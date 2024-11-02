@@ -2,19 +2,22 @@ extends Node2D
 
 signal done
 
-@onready var response_options = [$response_1,$response_2,$response_3]
+@onready var response_options = [$response_1,$response_2]
 
 var messages = []
-
 var typing_speed = .05
 var read_time = 1.5
 
 var current_message = 0
 var display = ""
 var current_char = 0
+var current_message_idx
 
 func _ready():
 	visible = false
+	hide_response_options()
+	
+func hide_response_options():
 	for response in response_options:
 		response.visible = false
 	
@@ -25,16 +28,17 @@ func start_dialogue(dialogue):
 	current_message = 0
 	display = ""
 	current_char = 0
-	
+
 	$next_char.set_wait_time(typing_speed)
 	$next_char.start()
 
 func stop_dialogue():
-	$talking/talking_message.text = ""
 	$next_char.stop()
 	$next_message.stop()
 
 func _on_next_char_timeout():
+	if len(messages) <= 0:
+		return
 	if (current_char < len(messages[current_message])):
 		var next_char = messages[current_message][current_char]
 		display += next_char
@@ -48,10 +52,18 @@ func _on_next_char_timeout():
 		$next_message.start()
 
 func _on_next_message_timeout():
+	if len(messages) <= 0:
+		return
 	if (current_message == len(messages) - 1):
+		var options = get_parent().player_responses[current_message_idx]
+		var index = 0
 		for response in response_options:
+			if index >= len(options):
+				break
 			response.visible = true
+			response.get_node("response_text").text = options[index]
 			response.get_node("select_arrow").visible = false
+			index+=1
 		stop_dialogue()
 	else: 
 		current_message += 1
@@ -74,11 +86,3 @@ func _on_response_2_button_mouse_entered() -> void:
 
 func _on_response_2_button_mouse_exited() -> void:
 	$response_2/select_arrow.visible = false
-
-
-func _on_response_3_button_mouse_entered() -> void:
-	$response_3/select_arrow.visible = true
-
-
-func _on_response_3_button_mouse_exited() -> void:
-	$response_3/select_arrow.visible = false

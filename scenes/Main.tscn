@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
 [ext_resource type="AudioStream" uid="uid://d1eqhocmwf63o" path="res://Audio/Chatter.mp3" id="10_wndwr"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
 texture = ExtResource("2_80qsc")
 margins = Vector2i(0, 8)
@@ -919,6 +920,11 @@ sources/3 = SubResource("TileSetAtlasSource_mpkso")
 sources/4 = SubResource("TileSetAtlasSource_cd1a0")
 sources/5 = SubResource("TileSetAtlasSource_gjv4w")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_xgnpd"]
+vertices = PackedVector2Array(69, 244.453, 119.992, 241.617, 119.07, 251.82, 69, 285.18, 694.211, 345, 694.781, 372, 12.0938, 372, 678.469, 345, 12.8984, 284.172, 199.32, 253.141, 201.352, 241.938, 328, 241.062, 328, 258.906, 674.461, 261.906)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(7, 6, 8, 3), PackedInt32Array(7, 3, 2, 9), PackedInt32Array(10, 11, 12), PackedInt32Array(7, 9, 10, 12), PackedInt32Array(7, 12, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(59, 235, 59, 275, 3, 274, 2, 382, 705, 382, 704, 335, 688, 335, 684, 252, 338, 249, 338, 231, 193, 232, 191, 243, 130, 242, 131, 231)])
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_hwh3g")
 
@@ -963,11 +969,16 @@ offset_bottom = 23.0
 
 [node name="DeincrementTimer" type="Timer" parent="."]
 
+
 [node name="ChatterSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_wndwr")
 volume_db = 17.0
 autoplay = true
 parameters/looping = true
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_xgnpd")
+
 
 [connection signal="talk" from="MainCharacter" to="." method="_on_main_character_talk"]
 [connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]

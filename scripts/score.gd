@@ -19,7 +19,6 @@ func _process(delta: float) -> void:
 	if not out_of_time and deincrement_score:
 		score -= 1
 		$Label.text = str(score)
-		print(score)
 		deincrement_score = false
 	if ate or drank or is_talking:
 		ate = false

@@ -34,6 +34,7 @@ scale = Vector2(3.0944, 2.81753)
 script = ExtResource("1_y8b0l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.646329, 0)
 shape = SubResource("RectangleShape2D_nvtms")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -43,3 +44,5 @@ frame_progress = 0.529403
 
 [node name="dialogue" parent="." instance=ExtResource("3_u5w5k")]
 position = Vector2(0, -80)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
