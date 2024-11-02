@@ -2,27 +2,27 @@
 
 [ext_resource type="Script" path="res://scripts/family_members/girl_cousin.gd" id="1_c6kj6"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_d54bw"]
-[ext_resource type="Texture2D" uid="uid://cm7jkp85tq5wc" path="res://assets/family_members_temp/roguelikeChar_transparent.png" id="1_iksv7"]
+[ext_resource type="Texture2D" uid="uid://e8stb4lvy0le" path="res://Art/Characters/Custom_Characters2.png" id="2_nlcqe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73sj5"]
-size = Vector2(18.0995, 15.9688)
+size = Vector2(15.8371, 15.9688)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_np4qq"]
-atlas = ExtResource("1_iksv7")
-region = Rect2(0, 0, 17, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jut26"]
+atlas = ExtResource("2_nlcqe")
+region = Rect2(288, 112, 98, 112)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sfmgc"]
-atlas = ExtResource("1_iksv7")
-region = Rect2(17, 0, 17, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcxeu"]
+atlas = ExtResource("2_nlcqe")
+region = Rect2(288, 0, 98, 112)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sic0w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_np4qq")
+"texture": SubResource("AtlasTexture_jut26")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sfmgc")
+"texture": SubResource("AtlasTexture_jcxeu")
 }],
 "loop": true,
 "name": &"walking",
@@ -34,13 +34,16 @@ scale = Vector2(3.094, 2.818)
 script = ExtResource("1_c6kj6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.86867e-06, 0.177431)
+position = Vector2(-0.161604, 0.177431)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_73sj5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2.12917)
+scale = Vector2(0.168699, 0.199458)
 sprite_frames = SubResource("SpriteFrames_sic0w")
 animation = &"walking"
+frame_progress = 0.0682898
 
 [node name="dialogue" parent="." instance=ExtResource("1_d54bw")]
 position = Vector2(0, -80)
