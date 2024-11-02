@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://c01klnriqycmm"]
+
+[ext_resource type="Texture2D" uid="uid://dxkh1ap04rxig" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="1_c21xf"]
+[ext_resource type="Script" path="res://scripts/WinningScore.gd" id="1_ce8ss"]
+[ext_resource type="Texture2D" uid="uid://2rtiw8u26vii" path="res://assets/UI/button_rectangle_depth_line.png" id="2_w7ahu"]
+[ext_resource type="Texture2D" uid="uid://bpvgkcrurgc86" path="res://Art/Characters/Restart.png" id="3_07fm7"]
+[ext_resource type="Texture2D" uid="uid://dc7s6m7p17e4k" path="res://Art/Characters/Quit.png" id="4_pcrt7"]
+[ext_resource type="FontFile" uid="uid://d4afo47fml43o" path="res://assets/04B_30__.TTF" id="5_d14vo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wgnev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hooli"]
+
+[node name="WinScreen" type="Node2D"]
+script = ExtResource("1_ce8ss")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(351.771, 191.562)
+scale = Vector2(0.175614, 0.169278)
+texture = ExtResource("1_c21xf")
+
+[node name="Napkin" type="Sprite2D" parent="."]
+position = Vector2(381, 240)
+scale = Vector2(1.65885, 1.77344)
+texture = ExtResource("2_w7ahu")
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = -19.0
+offset_top = 298.0
+offset_right = 173.0
+offset_bottom = 406.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wgnev")
+icon = ExtResource("3_07fm7")
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 530.0
+offset_top = 290.0
+offset_right = 722.0
+offset_bottom = 398.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hooli")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hooli")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hooli")
+icon = ExtResource("4_pcrt7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -351.0
+offset_top = 22.0
+offset_right = 1092.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0.745098, 0.345098, 0, 1)
+theme_override_fonts/font = ExtResource("5_d14vo")
+theme_override_font_sizes/font_size = 30
+text = "Congrats, 
+you talked to everyone!"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+offset_left = 238.0
+offset_top = 223.0
+offset_right = 522.0
+offset_bottom = 249.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_d14vo")
+theme_override_font_sizes/font_size = 25
