@@ -1,41 +1,46 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfgfrwgakni8v"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_16f08"]
-[ext_resource type="Texture2D" uid="uid://chu2kgyq4jq30" path="res://assets/ThanksgivingBackground.png" id="2_2115m"]
+[ext_resource type="Texture2D" uid="uid://bnp4wpd3hyidb" path="res://Art/Background.png" id="2_yiv6l"]
 [ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="3_ep0xp"]
 [ext_resource type="AudioStream" uid="uid://bcgcuxjxj88mk" path="res://Audio/Happy sounds.mp3" id="4_ta6ee"]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_16f08")
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(350, 192)
+scale = Vector2(0.911458, 0.75)
+texture = ExtResource("2_yiv6l")
+
 [node name="StartButton" type="Button" parent="."]
-offset_left = 480.0
-offset_top = 458.0
-offset_right = 694.0
-offset_bottom = 529.0
+offset_left = 288.0
+offset_top = 293.0
+offset_right = 423.0
+offset_bottom = 348.0
 text = "Start"
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 817.0
-offset_top = 458.0
-offset_right = 1031.0
-offset_bottom = 529.0
+offset_left = 470.0
+offset_top = 294.0
+offset_right = 605.0
+offset_bottom = 351.0
 text = "Quit"
 
 [node name="HelpButton" type="Button" parent="."]
-offset_left = 132.0
-offset_top = 455.0
-offset_right = 346.0
-offset_bottom = 526.0
+offset_left = 109.0
+offset_top = 293.0
+offset_right = 245.0
+offset_bottom = 349.0
 text = "Help"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 150.0
-offset_top = 210.0
-offset_right = 1025.0
-offset_bottom = 410.0
+offset_left = 15.0
+offset_top = 115.0
+offset_right = 693.0
+offset_bottom = 266.0
 theme_override_fonts/font = ExtResource("3_ep0xp")
-theme_override_font_sizes/font_size = 200
+theme_override_font_sizes/font_size = 150
 text = "Kin Konflict"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
