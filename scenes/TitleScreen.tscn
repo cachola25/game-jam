@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfgfrwgakni8v"]
+
+[ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_16f08"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_16f08")
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 458.0
+offset_right = 694.0
+offset_bottom = 529.0
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 817.0
+offset_top = 458.0
+offset_right = 1031.0
+offset_bottom = 529.0
+text = "Quit"
+
+[node name="HelpButton" type="Button" parent="."]
+offset_left = 132.0
+offset_top = 455.0
+offset_right = 346.0
+offset_bottom = 526.0
+text = "Help"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://daqms26yrmocr"]
+
+[ext_resource type="Script" path="res://scripts/EndScreen.gd" id="1_whtnr"]
+
+[node name="EndScreen" type="Node2D"]
+script = ExtResource("1_whtnr")
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 268.0
+offset_top = 424.0
+offset_right = 479.0
+offset_bottom = 499.0
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 701.0
+offset_top = 430.0
+offset_right = 912.0
+offset_bottom = 505.0
+text = "Quit"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
