@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfgfrwgakni8v"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_16f08"]
-[ext_resource type="Texture2D" uid="uid://dm2bmq8rgqy1k" path="res://Art/Background.png" id="2_yiv6l"]
-[ext_resource type="FontFile" uid="uid://c4cdkfwbdd3wo" path="res://assets/Meginta.ttf" id="3_ep0xp"]
+[ext_resource type="Texture2D" uid="uid://bnp4wpd3hyidb" path="res://Art/Background.png" id="2_yiv6l"]
+[ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="3_ep0xp"]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_16f08")
