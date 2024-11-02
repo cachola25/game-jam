@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cer8dwxp67e8g" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
 [ext_resource type="Texture2D" uid="uid://bys6db5s66r0v" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
 [ext_resource type="PackedScene" uid="uid://doofkr8gwcksj" path="res://scenes/main_character.tscn" id="8_s1j23"]
-[ext_resource type="PackedScene" uid="uid://bga1xfdps0aym" path="res://scenes/family_members/sister.tscn" id="9_hue3l"]
+[ext_resource type="PackedScene" uid="uid://c46rt7pokvoxn" path="res://scenes/family_members/girl_cousin.tscn" id="9_2hh75"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
 texture = ExtResource("2_80qsc")
@@ -947,8 +947,8 @@ tile_set = SubResource("TileSet_fix5s")
 
 [node name="MainCharacter" parent="." instance=ExtResource("8_s1j23")]
 
-[node name="sister" parent="." instance=ExtResource("9_hue3l")]
-position = Vector2(505, 311)
+[node name="girl_cousin" parent="." instance=ExtResource("9_2hh75")]
+position = Vector2(483, 313)
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0

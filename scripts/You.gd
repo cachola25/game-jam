@@ -56,6 +56,8 @@ func _on_player_response(family_npc, response):
 		aunt_dialogue_options(family_npc, response, msg)
 	elif family_npc is sister:
 		sister_dialogue_options(family_npc, response, msg)
+	elif family_npc is cousin_f:
+		cousin_f_dialogue_options(family_npc, response, msg)
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -157,6 +159,28 @@ func sister_dialogue_options(family_npc, response, msg):
 	elif family_npc.curr_message - 1 == 3:
 		if response == "Working at NASA is pretty cool.":
 			msg.append("If working for NASA isn't special, then shouldn't you ask yourself the same thing?")
+			conversation_done = true
+			
+func cousin_f_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "Why would I be jealous?":
+			msg.append("Jealous? Why would I be jealous of a walrus?")
+		elif response == "Why would I admit that?":
+			msg.append("If I was actually jealous, why would I ever admit to it?")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "Don't think they say good things.":
+			msg.append("You mean how they talk about how much of a bum you are?")
+			family_npc.curr_message += 1
+		elif response == "I don't need the attention.":
+			msg.append("Feels great to be in the background.")
+			msg.append("You should try it sometime.")
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("Nevermind, I guess you can't since walruses are hard to hide.")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "Don't you have veneers?":
+			msg.append("I wouldn't be talking, I'm not the one whose teeth are fake.")
 			conversation_done = true
 			
 func finish_conversation(family_npc):
