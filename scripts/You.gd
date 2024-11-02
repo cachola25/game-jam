@@ -39,12 +39,15 @@ func _process(delta: float) -> void:
 		collider = null
 	
 	if collider and collider is family_member:
-		get_parent().clear_indicators()
-		collider.get_node("indicator").visible = true
+		if not collider.talked_to:
+			get_parent().clear_indicators()
+			collider.get_node("indicator").visible = true
 	else:
 		get_parent().clear_indicators()
 	if collider and Input.is_action_just_pressed("interact") and not talking:
 		if not collider is family_member:
+			return
+		if collider.talked_to:
 			return
 		start_conversation(collider)
 		talking = true
@@ -332,6 +335,7 @@ func cousin_m_dialogue_options(family_npc, response, msg):
 func finish_conversation(family_npc):
 	talking = false
 	family_npc.talking = false
+	family_npc.talked_to = true
 
 func _on_response_timer_timeout() -> void:
 	$player_dialogue.visible = false

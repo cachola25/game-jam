@@ -7,6 +7,7 @@ signal chosen_response
 const SPEED = 60
 
 var talking = false  # Indicates whether the NPC is currently talking
+var talked_to = false
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("walking")
