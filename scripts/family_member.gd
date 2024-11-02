@@ -37,6 +37,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		set_velocity(Vector2.ZERO)
 		move_and_slide()
+	var collision = get_last_slide_collision()
+	
+	if collision:
+		var collider = collision.get_collider()
+		if collider is player:
+			var randX = randf_range(0, get_viewport_rect().size.x)
+			var randY = randf_range(0, get_viewport_rect().size.y)
+			make_path(Vector2(randX, randY))
 
 func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
 	if talking:
