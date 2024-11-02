@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://daqms26yrmocr"]
+[gd_scene load_steps=5 format=3 uid="uid://daqms26yrmocr"]
 
 [ext_resource type="Script" path="res://scripts/EndScreen.gd" id="1_whtnr"]
 [ext_resource type="Texture2D" uid="uid://chu2kgyq4jq30" path="res://assets/ThanksgivingBackground.png" id="2_dr1ly"]
 [ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="3_kynsj"]
+[ext_resource type="AudioStream" uid="uid://bvql1f3odixcq" path="res://assets/SadViolin.mp3" id="4_ff6t6"]
 
 [node name="EndScreen" type="Node2D"]
 script = ExtResource("1_whtnr")
@@ -34,6 +35,10 @@ offset_bottom = 405.0
 theme_override_fonts/font = ExtResource("3_kynsj")
 theme_override_font_sizes/font_size = 150
 text = "Face them again?"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ff6t6")
+autoplay = true
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
