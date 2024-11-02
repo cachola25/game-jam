@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfgfrwgakni8v"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_16f08"]
-[ext_resource type="Texture2D" uid="uid://dm2bmq8rgqy1k" path="res://Art/Background.png" id="2_yiv6l"]
-[ext_resource type="FontFile" uid="uid://c4cdkfwbdd3wo" path="res://assets/Meginta.ttf" id="3_ep0xp"]
+[ext_resource type="Texture2D" uid="uid://c3smnhtn4v6fv" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="2_d8mo5"]
+[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="3_yptd8"]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_16f08")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(350, 192)
-scale = Vector2(0.911458, 0.75)
-texture = ExtResource("2_yiv6l")
+position = Vector2(350.021, 192.312)
+scale = Vector2(0.17499, 0.170389)
+texture = ExtResource("2_d8mo5")
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 288.0
@@ -34,13 +34,18 @@ offset_bottom = 349.0
 text = "Help"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 15.0
-offset_top = 115.0
-offset_right = 693.0
-offset_bottom = 266.0
-theme_override_fonts/font = ExtResource("3_ep0xp")
-theme_override_font_sizes/font_size = 150
-text = "Kin Konflict"
+anchors_preset = -1
+offset_left = 258.0
+offset_top = 16.0
+offset_right = 511.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(0.744344, 0.344714, 0, 1)
+theme_override_fonts/font = ExtResource("3_yptd8")
+theme_override_font_sizes/font_size = 50
+text = "Turkey 
+Talk"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
