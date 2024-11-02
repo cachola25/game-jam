@@ -1,25 +1,33 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 
+var talking = false
+var collider
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func _process(delta: float) -> void:
+		
+	var direction = Vector2.ZERO # (0,0d)
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+	if Input.is_action_pressed("move_up"):
+		direction.y -= 1
+	if Input.is_action_pressed("move_down"):
+		direction.y += 1
+	if Input.is_action_pressed("move_left"):
+		direction.x -= 1
+	if Input.is_action_pressed("move_right"):
+		direction.x += 1
+	
+	if direction.length() > 1:
+		direction = direction.normalized()
+				
+	var collision_info = move_and_collide(direction * SPEED * delta)
+	if collision_info and not talking:
+		collider = collision_info.get_collider()
+		
+	if collider and Input.is_action_just_pressed("interact"):
+		start_conversation(collider)
+		talking = true
+	
+func start_conversation(family_member):
+	family_member.get_node("dialogue").start_dialogue(family_member.messages)

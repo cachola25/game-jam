@@ -1,12 +1,14 @@
-[gd_scene load_steps=15 format=4 uid="uid://tdk1jptyw5bu"]
+[gd_scene load_steps=17 format=4 uid="uid://tdk1jptyw5bu"]
 
-[ext_resource type="Script" path="res://scenes/Main.gd" id="1_rbrlw"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
 [ext_resource type="Texture2D" uid="uid://cg4yhw1dvp1j6" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
 [ext_resource type="Texture2D" uid="uid://mhoxg817m8dl" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
 [ext_resource type="Texture2D" uid="uid://wvu2y2rcl045" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
 [ext_resource type="Texture2D" uid="uid://ckyv4jem2eod7" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
 [ext_resource type="Texture2D" uid="uid://ynceud43exnc" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
 [ext_resource type="Texture2D" uid="uid://dgje0lfhl88jn" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
+[ext_resource type="PackedScene" uid="uid://bihir6cvi5k0v" path="res://scenes/main_character.tscn" id="8_s1j23"]
+[ext_resource type="PackedScene" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
 texture = ExtResource("2_80qsc")
@@ -917,7 +919,7 @@ sources/4 = SubResource("TileSetAtlasSource_cd1a0")
 sources/5 = SubResource("TileSetAtlasSource_gjv4w")
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_rbrlw")
+script = ExtResource("1_hwh3g")
 
 [node name="Layer1" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -947,3 +949,16 @@ tile_set = SubResource("TileSet_fix5s")
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAdABIAAwABAAYAAAAfABQAAwADAAYAAAAeABMAAwAFAAcAAAAfABMAAwAHAAQAAAAfABIAAwACAAQAAAAeABIAAwABAAQAAAAeABQAAwAEAAIAAAAdABQAAwAAAAQAAAAdABMAAwAAAAQAAAAgABMAAwAFAAIAAAAgABQAAwAAAAUAAAAgABIAAwADAAUAAAApABYAAwAHAAMAAAAaAAoAAwACAAMAAAAdAAoAAwACAAMAAAAUAAYAAQAIAA8AAAAVAAYAAQAJAA8AAAAWAAYAAQAJAA8AAAAXAAYAAQAKAA8AAAAVABUAAwAAAAIAAAAVABYAAwABAAIAAAAWABUAAwACAAIAAAA=")
 tile_set = SubResource("TileSet_fix5s")
+
+[node name="MainCharacter" parent="." instance=ExtResource("8_s1j23")]
+
+[node name="mom" parent="." instance=ExtResource("9_6ejqo")]
+position = Vector2(496, 341)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="DeincrementTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]
