@@ -8,7 +8,6 @@ var messages = [
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("walking")
-	$dialogue.start_dialogue(messages)
 	
 func _process(delta: float) -> void:
 	pass
