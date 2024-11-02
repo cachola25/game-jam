@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://csckrd52dmdnh"]
+[gd_scene load_steps=5 format=3 uid="uid://dtiyehegxwa1g"]
 
 [ext_resource type="Script" path="res://scripts/food.gd" id="1_rbvlo"]
 [ext_resource type="Texture2D" uid="uid://bos8i0uxnotwb" path="res://Art/kenney_tiny-dungeon/Tiles/tile_0115.png" id="2_7psvy"]
 [ext_resource type="Texture2D" uid="uid://b3mrulrshrm17" path="res://Art/kenney_tiny-dungeon/Tiles/pixil-frame-0 (3).png" id="3_qqulq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fttn5"]
-radius = 33.0151
+radius = 45.0444
 
 [node name="Drank" type="Node2D"]
 script = ExtResource("1_rbvlo")
