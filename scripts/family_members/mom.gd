@@ -4,9 +4,17 @@ class_name mom
 
 var curr_message = 0
 var messages = [
-	["When are you going to get a real job?"],
-	["You know your sister would never talk to me like that?",
-	"Why can't you be more like her?"]
+	[
+		"When are you going to get a real job?"
+	],
+	[
+		"You know your sister would never talk to me like that?",
+		"Why can't you be more like her?"
+	],
+	[
+		"Are you watching what you eat?",
+		"You look like you're letting yourself go."
+	]
 ]
 
 var player_responses = [
@@ -17,6 +25,9 @@ var player_responses = [
 	[
 		"Why can't you be more like yours?",
 		"I'm just being myself."
+	],
+	[
+		"Are you watching what you cook?"
 	]
 ]
 

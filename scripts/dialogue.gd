@@ -54,6 +54,8 @@ func _on_next_message_timeout():
 		var options = get_parent().player_responses[current_message_idx]
 		var index = 0
 		for response in response_options:
+			if index >= len(options):
+				break
 			response.visible = true
 			response.get_node("response_text").text = options[index]
 			response.get_node("select_arrow").visible = false

@@ -73,6 +73,11 @@ func mom_dialogue_options(family_npc, response, msg):
 			msg.append("I'm sorry, I'm just being myself.")
 			msg.append("But, I'm glad you both get along great.")
 			conversation_done = true
+	elif family_npc.curr_message - 1 == 2:
+		if response == "Are you watching what you cook?":
+			msg.append("Are you watching any cooking shows? You could really use some help in the kitchen")
+			msg.append("At least I know how to cook something that I would want to eat.")
+			conversation_done = true
 
 func finish_conversation(family_npc):
 	talking = false
