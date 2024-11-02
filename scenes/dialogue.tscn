@@ -5,20 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://dvn4t6t8etuds" path="res://assets/UI/button_rectangle_depth_line.png" id="3_ad5qx"]
 [ext_resource type="Texture2D" uid="uid://huv3vwhevyul" path="res://assets/UI/icon_play_outline.png" id="4_ic0ux"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_smbul"]
-font_size = 8
+[sub_resource type="LabelSettings" id="LabelSettings_pa6md"]
+font_size = 2
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_y146x"]
-font_size = 7
+font_size = 2
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_amiom"]
-font_size = 7
+font_size = 2
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_m5gis"]
-font_size = 7
+font_size = 2
 font_color = Color(0, 0, 0, 1)
 
 [node name="dialogue" type="Node2D"]
@@ -39,126 +39,123 @@ offset_bottom = 2.0
 [node name="talking" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 14.0
+offset_right = 44.0
+offset_bottom = 36.0
 
 [node name="talking_bg" type="Sprite2D" parent="talking"]
-position = Vector2(14.7146, 0)
-scale = Vector2(1.91517, 0.781094)
+position = Vector2(-0.16068, 34.7506)
+scale = Vector2(0.598771, 0.226543)
 texture = ExtResource("2_x5ulu")
 
 [node name="talking_message" type="Label" parent="talking"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.575
-offset_left = -38.0
-offset_top = -21.0
-offset_right = 45.0
-offset_bottom = 21.0
-scale = Vector2(1, 1.00774)
-label_settings = SubResource("LabelSettings_smbul")
+layout_mode = 0
+offset_left = -17.0
+offset_top = 28.0
+offset_right = 16.0
+offset_bottom = 41.0
+label_settings = SubResource("LabelSettings_pa6md")
 autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="response_1" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -45.0
-offset_top = 27.0
-offset_right = 47.0
-offset_bottom = 43.0
+offset_left = -18.0
+offset_top = 58.0
+offset_right = 74.0
+offset_bottom = 74.0
 mouse_filter = 1
 
 [node name="response_1_bg" type="Sprite2D" parent="response_1"]
-position = Vector2(60.5, 9)
-scale = Vector2(0.630208, 0.29507)
+position = Vector2(18, 1)
+scale = Vector2(0.197917, 0.0694099)
 texture = ExtResource("3_ad5qx")
 
 [node name="response_1_text" type="Label" parent="response_1"]
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 125.0
-offset_bottom = 13.0
+offset_top = -1.0
+offset_right = 36.0
+offset_bottom = 3.0
 text = "\"I don't want to be like my sister\""
 label_settings = SubResource("LabelSettings_y146x")
-autowrap_mode = 2
 
 [node name="response_1_button" type="TextureButton" parent="response_1"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 120.0
-offset_bottom = 18.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 37.0
+offset_bottom = 3.0
 
 [node name="select_arrow" type="Sprite2D" parent="response_1"]
-position = Vector2(-8, 8)
-scale = Vector2(0.352941, 0.263158)
+position = Vector2(-4, 1)
+scale = Vector2(0.117647, 0.0789473)
 texture = ExtResource("4_ic0ux")
 
 [node name="response_2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -8.0
+offset_top = 67.0
+offset_right = 32.0
+offset_bottom = 107.0
 mouse_filter = 1
 
 [node name="response_2_bg" type="Sprite2D" parent="response_2"]
-position = Vector2(15, 57)
-scale = Vector2(0.630208, 0.296875)
+position = Vector2(8, -3)
+scale = Vector2(0.199219, 0.0664062)
 texture = ExtResource("3_ad5qx")
 
 [node name="response_2_text" type="Label" parent="response_2"]
-offset_left = -41.0
-offset_top = 51.0
-offset_right = 71.0
-offset_bottom = 62.0
+offset_left = -10.0
+offset_top = -5.0
+offset_right = 26.0
+offset_bottom = -1.0
 text = "\"I don't want to be like my sister\""
 label_settings = SubResource("LabelSettings_amiom")
 
 [node name="response_2_button" type="TextureButton" parent="response_2"]
 layout_mode = 0
-offset_left = -46.0
-offset_top = 48.0
-offset_right = 76.0
-offset_bottom = 66.0
+offset_left = -11.0
+offset_top = -5.0
+offset_right = 27.0
+offset_bottom = -1.0
 
 [node name="select_arrow" type="Sprite2D" parent="response_2"]
-position = Vector2(-54, 56)
-scale = Vector2(0.367647, 0.276316)
+position = Vector2(-14, -3)
+scale = Vector2(0.121324, 0.0855263)
 texture = ExtResource("4_ic0ux")
 
 [node name="response_3" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 109.0
-offset_top = -12.0
-offset_right = 149.0
-offset_bottom = 28.0
+offset_left = 135.0
+offset_top = -1.0
+offset_right = 175.0
+offset_bottom = 39.0
 mouse_filter = 1
 
 [node name="response_3_bg" type="Sprite2D" parent="response_3"]
-position = Vector2(-94, 91)
-scale = Vector2(0.635417, 0.296875)
+position = Vector2(-135, 70)
+scale = Vector2(0.197917, 0.0664062)
 texture = ExtResource("3_ad5qx")
 
 [node name="response_3_text" type="Label" parent="response_3"]
-offset_left = -150.0
-offset_top = 85.0
-offset_right = -38.0
-offset_bottom = 96.0
+offset_left = -153.0
+offset_top = 68.0
+offset_right = -117.0
+offset_bottom = 72.0
 text = "\"I don't want to be like my sister\""
 label_settings = SubResource("LabelSettings_m5gis")
 
 [node name="response_3_button" type="TextureButton" parent="response_3"]
 layout_mode = 0
-offset_left = -155.0
-offset_top = 82.0
-offset_right = -33.0
-offset_bottom = 100.0
+offset_left = -154.0
+offset_top = 68.0
+offset_right = -116.0
+offset_bottom = 72.0
 
 [node name="select_arrow" type="Sprite2D" parent="response_3"]
-position = Vector2(-163, 90)
-scale = Vector2(0.367647, 0.276316)
+position = Vector2(-157, 70)
+scale = Vector2(0.125, 0.0855263)
 texture = ExtResource("4_ic0ux")
 
 [connection signal="timeout" from="next_char" to="." method="_on_next_char_timeout"]

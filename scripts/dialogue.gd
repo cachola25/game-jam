@@ -30,6 +30,7 @@ func start_dialogue(dialogue):
 	$next_char.start()
 
 func stop_dialogue():
+	$talking/talking_message.text = ""
 	$next_char.stop()
 	$next_message.stop()
 
