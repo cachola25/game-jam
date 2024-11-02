@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://doofkr8gwcksj"]
 
 [ext_resource type="Script" path="res://scripts/You.gd" id="1_y0bsv"]
-[ext_resource type="Texture2D" uid="uid://ncp3dubahtqs" path="res://Art/Characters/Main_Female.png" id="2_chiof"]
+[ext_resource type="Texture2D" uid="uid://1opkh8ev4ji2" path="res://Art/Characters/Main_Female.png" id="2_chiof"]
 [ext_resource type="PackedScene" uid="uid://c4r6ushs3mnvy" path="res://scenes/player_dialogue.tscn" id="3_lla3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umhr3"]
@@ -25,7 +25,7 @@ texture = ExtResource("2_chiof")
 position = Vector2(0, -50)
 
 [node name="response_timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 2.0
 one_shot = true
 
 [connection signal="timeout" from="response_timer" to="." method="_on_response_timer_timeout"]

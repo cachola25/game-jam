@@ -6,7 +6,7 @@ signal done
 
 var messages = []
 var typing_speed = .05
-var read_time = 1.5
+var read_time = 2.0
 
 var current_message = 0
 var display = ""
