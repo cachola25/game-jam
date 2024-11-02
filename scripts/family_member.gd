@@ -4,7 +4,7 @@ class_name family_member
 
 signal chosen_response
 
-const SPEED = 100
+const SPEED = 60
 
 var talking = false  # Indicates whether the NPC is currently talking
 

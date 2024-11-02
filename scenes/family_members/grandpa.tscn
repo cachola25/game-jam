@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/family_members/grandpa.gd" id="1_cyjls"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_ri5oq"]
-[ext_resource type="Texture2D" uid="uid://dgmcrs01jl20a" path="res://Art/Characters/Custom_Characters2.png" id="2_c8b7t"]
+[ext_resource type="Texture2D" uid="uid://c23dwqfmuuoja" path="res://Art/Characters/Custom_Characters2.png" id="2_c8b7t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qynpd"]
 size = Vector2(13.2515, 14.9042)
@@ -30,7 +30,6 @@ animations = [{
 }]
 
 [node name="grandpa" type="CharacterBody2D"]
-scale = Vector2(3.094, 2.818)
 collision_layer = 128
 collision_mask = 128
 script = ExtResource("1_cyjls")
@@ -47,6 +46,7 @@ animation = &"walking"
 frame_progress = 0.909542
 
 [node name="dialogue" parent="." instance=ExtResource("1_ri5oq")]
-position = Vector2(0, -80)
+visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cghqgxmvroxw1"]
 
 [ext_resource type="Script" path="res://scripts/family_members/mom.gd" id="1_y8b0l"]
-[ext_resource type="Texture2D" uid="uid://cc3oiwr86bx1e" path="res://Art/Characters/Custom_Characters.png" id="2_3uo0x"]
+[ext_resource type="Texture2D" uid="uid://cfak2uq13hfui" path="res://Art/Characters/Custom_Characters.png" id="2_3uo0x"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="3_u5w5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvtms"]
@@ -30,7 +30,6 @@ animations = [{
 }]
 
 [node name="mom" type="CharacterBody2D"]
-scale = Vector2(3.0944, 2.81753)
 collision_layer = 256
 collision_mask = 256
 script = ExtResource("1_y8b0l")
@@ -47,6 +46,7 @@ animation = &"walking"
 frame_progress = 0.756132
 
 [node name="dialogue" parent="." instance=ExtResource("3_u5w5k")]
-position = Vector2(0, -80)
+visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
