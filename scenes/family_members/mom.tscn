@@ -1,28 +1,28 @@
 [gd_scene load_steps=8 format=3 uid="uid://cghqgxmvroxw1"]
 
-[ext_resource type="Texture2D" uid="uid://cm7jkp85tq5wc" path="res://assets/family_members_temp/roguelikeChar_transparent.png" id="1_lhqc1"]
 [ext_resource type="Script" path="res://scripts/family_members/mom.gd" id="1_y8b0l"]
+[ext_resource type="Texture2D" uid="uid://c6hcm76i3ln7n" path="res://Art/Characters/Custom_Characters.png" id="2_3uo0x"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="3_u5w5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvtms"]
-size = Vector2(17, 16)
+size = Vector2(14.8656, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p8g0c"]
-atlas = ExtResource("1_lhqc1")
-region = Rect2(0, 0, 17, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjvor"]
+atlas = ExtResource("2_3uo0x")
+region = Rect2(23, 0, 95, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tdsvs"]
-atlas = ExtResource("1_lhqc1")
-region = Rect2(17, 0, 17, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7aa07"]
+atlas = ExtResource("2_3uo0x")
+region = Rect2(23, 107, 95, 98)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rggdk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p8g0c")
+"texture": SubResource("AtlasTexture_hjvor")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tdsvs")
+"texture": SubResource("AtlasTexture_7aa07")
 }],
 "loop": true,
 "name": &"walking",
@@ -38,9 +38,11 @@ position = Vector2(-0.646329, 0)
 shape = SubResource("RectangleShape2D_nvtms")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.29204, 0.655119)
+scale = Vector2(0.197313, 0.185653)
 sprite_frames = SubResource("SpriteFrames_rggdk")
 animation = &"walking"
-frame_progress = 0.529403
+frame_progress = 0.756132
 
 [node name="dialogue" parent="." instance=ExtResource("3_u5w5k")]
 position = Vector2(0, -80)

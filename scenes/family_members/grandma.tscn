@@ -1,28 +1,28 @@
 [gd_scene load_steps=8 format=3 uid="uid://chacy0r45g5np"]
 
 [ext_resource type="Script" path="res://scripts/family_members/grandma.gd" id="1_bp1dp"]
-[ext_resource type="Texture2D" uid="uid://cm7jkp85tq5wc" path="res://assets/family_members_temp/roguelikeChar_transparent.png" id="1_onqdk"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_oq7po"]
+[ext_resource type="Texture2D" uid="uid://e8stb4lvy0le" path="res://Art/Characters/Custom_Characters2.png" id="2_7a1jc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iibw6"]
-size = Vector2(17.5185, 16.0312)
+size = Vector2(14.5443, 15.4677)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_38b5t"]
-atlas = ExtResource("1_onqdk")
-region = Rect2(0, 0, 17, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eqr8"]
+atlas = ExtResource("2_7a1jc")
+region = Rect2(108, 0, 98, 112)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3epsn"]
-atlas = ExtResource("1_onqdk")
-region = Rect2(17, 0, 17, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2dsi"]
+atlas = ExtResource("2_7a1jc")
+region = Rect2(108, 112, 98, 112)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_veb2x"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_38b5t")
+"texture": SubResource("AtlasTexture_2eqr8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3epsn")
+"texture": SubResource("AtlasTexture_s2dsi")
 }],
 "loop": true,
 "name": &"walking",
@@ -34,16 +34,16 @@ scale = Vector2(3.094, 2.818)
 script = ExtResource("1_bp1dp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7.10543e-15, 0)
+position = Vector2(1.13122, 0.281754)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_iibw6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.19209e-07, 0)
+position = Vector2(1.29282, -1.94322)
+scale = Vector2(0.171497, 0.186784)
 sprite_frames = SubResource("SpriteFrames_veb2x")
 animation = &"walking"
-frame = 1
-frame_progress = 0.279624
+frame_progress = 0.546257
 
 [node name="dialogue" parent="." instance=ExtResource("1_oq7po")]
 position = Vector2(0, -80)

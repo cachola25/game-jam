@@ -1,3 +1,48 @@
-[gd_scene format=3 uid="uid://cr1ax7dt2173n"]
+[gd_scene load_steps=7 format=3 uid="uid://cfgqesq55iqua"]
 
-[node name="brother" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://c6hcm76i3ln7n" path="res://Art/Characters/Custom_Characters.png" id="1_kgqsw"]
+[ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="2_q33qh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmjyo"]
+size = Vector2(12.4641, 15.0163)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2ld5"]
+atlas = ExtResource("1_kgqsw")
+region = Rect2(279, 0, 85, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oixh"]
+atlas = ExtResource("1_kgqsw")
+region = Rect2(279, 109, 85, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y8352"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2ld5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oixh")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="brother" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.232073, 0.508168)
+shape = SubResource("RectangleShape2D_nmjyo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.164706, 0.1875)
+sprite_frames = SubResource("SpriteFrames_y8352")
+animation = &"walking"
+frame_progress = 0.204249
+
+[node name="dialogue" parent="." instance=ExtResource("2_q33qh")]
+visible = false
+position = Vector2(0, -80)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
