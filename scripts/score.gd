@@ -22,6 +22,8 @@ func _ready() -> void:
 	is_talking = false
 	out_of_time = false
 	$DeincrementTimer.start()
+	for npc in NPCs:
+		npc.connect("check_if_talked_to_all", _on_check_if_talked_to_all)
 func _process(delta: float) -> void:
 	if not out_of_time and deincrement_score:
 		score -= 1
@@ -30,9 +32,9 @@ func _process(delta: float) -> void:
 	if is_talking:
 		is_talking = false
 		score += 30
-	if score == 0:
-		out_of_time = true
-		get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")
+	#if score == 0:
+		#out_of_time = true
+		#get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")
 
 func _on_deincrement_timer_timeout() -> void:
 	deincrement_score = true
@@ -45,7 +47,12 @@ func clear_indicators():
 	for npc in NPCs:
 		npc.get_node("indicator").visible = false
 
-
+func _on_check_if_talked_to_all():
+	for npc in NPCs:
+		if not npc.talked_to:
+			return
+	get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")
+	
 func _on_drank_caneat() -> void:
 	$ConsumeTimer.start()
 	drank1 = true

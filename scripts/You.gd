@@ -336,6 +336,7 @@ func finish_conversation(family_npc):
 	talking = false
 	family_npc.talking = false
 	family_npc.talked_to = true
+	family_npc.emit_signal("check_if_talked_to_all")
 
 func _on_response_timer_timeout() -> void:
 	$player_dialogue.visible = false
