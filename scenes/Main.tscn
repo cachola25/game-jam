@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://tdk1jptyw5bu"]
+[gd_scene load_steps=18 format=4 uid="uid://tdk1jptyw5bu"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
 [ext_resource type="Texture2D" uid="uid://bsbgjagtf4j8t" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cb8u3p343oiv2" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
 [ext_resource type="PackedScene" path="res://scenes/main_character.tscn" id="8_s1j23"]
 [ext_resource type="PackedScene" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
+[ext_resource type="AudioStream" uid="uid://d1eqhocmwf63o" path="res://Audio/Chatter.mp3" id="10_wndwr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
 texture = ExtResource("2_80qsc")
@@ -961,6 +962,11 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="DeincrementTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_wndwr")
+autoplay = true
+parameters/looping = true
 
 [connection signal="talk" from="MainCharacter" to="." method="_on_main_character_talk"]
 [connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]
