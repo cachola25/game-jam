@@ -22,3 +22,9 @@ texture = ExtResource("2_54inl")
 [node name="player_dialogue" parent="." instance=ExtResource("3_lla3m")]
 visible = false
 position = Vector2(0, -50)
+
+[node name="response_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="response_timer" to="." method="_on_response_timer_timeout"]

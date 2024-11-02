@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4r6ushs3mnvy"]
+[gd_scene load_steps=4 format=3 uid="uid://c4r6ushs3mnvy"]
 
+[ext_resource type="Script" path="res://scripts/player_dialogue.gd" id="1_rmp0h"]
 [ext_resource type="Texture2D" uid="uid://iki4mrgpdtc3" path="res://assets/UI/input_square.png" id="1_rr7me"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cqxfi"]
-font_size = 2
+font_size = 6
 font_color = Color(0, 0, 0, 1)
 
 [node name="player_dialogue" type="Node2D"]
 scale = Vector2(0.987399, 1.00907)
+script = ExtResource("1_rmp0h")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -32,9 +34,12 @@ texture = ExtResource("1_rr7me")
 
 [node name="talking_message" type="Label" parent="talking"]
 layout_mode = 0
-offset_left = -17.0
-offset_top = -6.0
-offset_right = 17.0
-offset_bottom = 6.0
+offset_left = -44.0
+offset_top = -19.0
+offset_right = 44.0
+offset_bottom = 20.0
 label_settings = SubResource("LabelSettings_cqxfi")
 autowrap_mode = 2
+
+[connection signal="timeout" from="next_char" to="." method="_on_next_char_timeout"]
+[connection signal="timeout" from="next_message" to="." method="_on_next_message_timeout"]
