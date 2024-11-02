@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfgfrwgakni8v"]
+[gd_scene load_steps=4 format=3 uid="uid://dfgfrwgakni8v"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_16f08"]
+[ext_resource type="Texture2D" uid="uid://chu2kgyq4jq30" path="res://assets/ThanksgivingBackground.png" id="2_2115m"]
+[ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="3_ep0xp"]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_16f08")
+
+[node name="ThanksgivingBackground" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.5, 1.26562)
+texture = ExtResource("2_2115m")
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 480.0
@@ -25,6 +32,15 @@ offset_top = 455.0
 offset_right = 346.0
 offset_bottom = 526.0
 text = "Help"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 150.0
+offset_top = 210.0
+offset_right = 1025.0
+offset_bottom = 410.0
+theme_override_fonts/font = ExtResource("3_ep0xp")
+theme_override_font_sizes/font_size = 200
+text = "Kin Konflict"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
