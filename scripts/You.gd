@@ -50,6 +50,8 @@ func _on_player_response(family_npc, response):
 	var msg = []
 	if family_npc is mom:
 		mom_dialogue_options(family_npc, response, msg)
+	elif family_npc is grandma:
+		grandma_dialogue_options(family_npc, response, msg)
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -83,6 +85,29 @@ func mom_dialogue_options(family_npc, response, msg):
 			msg.append("At least I know how to cook something that I would want to eat.")
 			conversation_done = true
 
+func grandma_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "You're growing old, grandma.":
+			msg.append("When will you meet your maker?")
+		elif response == "I'm waiting for the right person.":
+			msg.append("I'm just waiting for the right person")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "Sorry grandma, I haven't had time.":
+			msg.append("Sorry Grandma, I don't have the time to sit through a life lecture each time.")
+			family_npc.curr_message += 1
+		elif response == "Sorry grandma, life gets in the way.":
+			msg.append("I'm sorry, grandma.")
+			msg.append("I would but I've been too busy trying to start my life.")
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("Thanks, grandma. I'll try to call more.")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "Ask that to your daughter.":
+			msg.append("Has your daughter ever learned how to cook?")
+			msg.append("She could barely take care of me.")
+			conversation_done = true
+			
 func finish_conversation(family_npc):
 	talking = false
 	family_npc.talking = false

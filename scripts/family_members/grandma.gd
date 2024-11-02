@@ -5,29 +5,35 @@ class_name grandma
 var curr_message = 0
 var messages = [
 	[
-		"When are you going to get a real job?"
+		"When will you find a partner, you're already 25?"
 	],
 	[
-		"You know your sister would never talk to me like that?",
-		"Why can't you be more like her?"
+		"Why don't you call me more often?"
 	],
 	[
-		"Are you watching what you eat?",
-		"You look like you're letting yourself go."
+		"That makes sense, my darling.",
+		"At least you are busy making a life for yourself instead of rotting away."
+	],
+	[
+		"Are you ever going to learn how to cook?",
+		"You need to learn how to take care of yourself."
 	]
 ]
 
 var player_responses = [
 	[
-		"I'm still looking for one.",
-		"My job pays well." 
+		"You're growing old, grandma.",
+		"I'm waiting for the right person." 
 	],
 	[
-		"Why can't you be more like yours?",
-		"I'm just being myself."
+		"Sorry grandma, I haven't had time.",
+		"Sorry grandma, life gets in the way."
 	],
 	[
-		"Are you watching what you cook?"
+		"*Leave Convo*"
+	],
+	[
+		"Ask that to your daughter."
 	]
 ]
 
