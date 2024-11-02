@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="game_jam_godot"
+run/main_scene="res://scenes/TitleScreen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+TitleScreenMusic="*res://scenes/TitleScreenMUSIC.tscn"
 
 [display]
 

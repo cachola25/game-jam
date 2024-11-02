@@ -1,14 +1,15 @@
-[gd_scene load_steps=18 format=4 uid="uid://bswtp6xt8pg6q"]
+[gd_scene load_steps=19 format=4 uid="uid://tdk1jptyw5bu"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
-[ext_resource type="Texture2D" uid="uid://yl2m0r2e1jbi" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
-[ext_resource type="Texture2D" uid="uid://gms6n5oja04o" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
-[ext_resource type="Texture2D" uid="uid://djfiu07h2w7xa" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
-[ext_resource type="Texture2D" uid="uid://ciwybyh5mmwi1" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
-[ext_resource type="Texture2D" uid="uid://cer8dwxp67e8g" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
-[ext_resource type="Texture2D" uid="uid://bys6db5s66r0v" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
-[ext_resource type="PackedScene" uid="uid://doofkr8gwcksj" path="res://scenes/main_character.tscn" id="8_s1j23"]
-[ext_resource type="PackedScene" uid="uid://ct14xtxpobaie" path="res://scenes/family_members/uncle.tscn" id="9_vtbma"]
+[ext_resource type="Texture2D" uid="uid://bsbgjagtf4j8t" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
+[ext_resource type="Texture2D" uid="uid://cbwgkhtavgnw8" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
+[ext_resource type="Texture2D" uid="uid://dtjnr7eh8ynif" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
+[ext_resource type="Texture2D" uid="uid://kdw2kewx34se" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
+[ext_resource type="Texture2D" uid="uid://rgsiyqnvt0bd" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
+[ext_resource type="Texture2D" uid="uid://cb8u3p343oiv2" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
+[ext_resource type="PackedScene" path="res://scenes/main_character.tscn" id="8_s1j23"]
+[ext_resource type="PackedScene" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
+[ext_resource type="AudioStream" uid="uid://d1eqhocmwf63o" path="res://Audio/Chatter.mp3" id="10_wndwr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
 texture = ExtResource("2_80qsc")
@@ -966,6 +967,12 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="DeincrementTimer" type="Timer" parent="."]
+
+[node name="ChatterSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_wndwr")
+volume_db = 17.0
+autoplay = true
+parameters/looping = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_xgnpd")
