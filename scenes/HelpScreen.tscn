@@ -38,16 +38,21 @@ text = "Help"
 
 [node name="Description" type="Label" parent="."]
 offset_left = 51.0
-offset_top = 146.0
+offset_top = 142.0
 offset_right = 1097.0
-offset_bottom = 534.0
+offset_bottom = 589.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_51mfi")
-theme_override_font_sizes/font_size = 48
-text = "WASD  - Move in corresponding direction
+theme_override_font_sizes/font_size = 46
+text = "Welcome! To thanksgiving with your family. You may try to make it 
+without talking to your squabbling relatives but time is of the essence and
+if you don't talk to everyone, you may not make it to dinner....
+
+WASD  - Move in corresponding direction
+
+Click - Choose an option when talking to a disgruntled family member
 
 E - Interact
-
-Click - Choose an option when talking to a disgruntled family member"
+"
 
 [connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]

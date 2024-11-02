@@ -34,10 +34,10 @@ offset_bottom = 526.0
 text = "Help"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 275.0
-offset_top = 194.0
-offset_right = 1150.0
-offset_bottom = 394.0
+offset_left = 150.0
+offset_top = 210.0
+offset_right = 1025.0
+offset_bottom = 410.0
 theme_override_fonts/font = ExtResource("3_ep0xp")
 theme_override_font_sizes/font_size = 200
 text = "Kin Konflict"
