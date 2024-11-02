@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ct14xtxpobaie"]
+[gd_scene load_steps=9 format=3 uid="uid://ct14xtxpobaie"]
 
 [ext_resource type="Script" path="res://scripts/family_members/uncle.gd" id="1_xh8ri"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_yriue"]
 [ext_resource type="Texture2D" uid="uid://c23dwqfmuuoja" path="res://Art/Characters/Custom_Characters2.png" id="2_jt3at"]
+[ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="3_ocyj2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgt3h"]
 atlas = ExtResource("2_jt3at")
@@ -35,15 +36,17 @@ collision_mask = 1024
 script = ExtResource("1_xh8ri")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(9.53674e-07, 4.76837e-07)
+position = Vector2(2, -2.84217e-14)
 scale = Vector2(0.259151, 0.198316)
 sprite_frames = SubResource("SpriteFrames_12wgs")
 animation = &"walking"
 frame_progress = 0.831328
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, -0.39261)
 shape = SubResource("RectangleShape2D_njnol")
+
+[node name="indicator" parent="." instance=ExtResource("3_ocyj2")]
+position = Vector2(0, -16)
 
 [node name="dialogue" parent="." instance=ExtResource("1_yriue")]
 visible = false

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr1ax7dt2173n"]
+[gd_scene load_steps=9 format=3 uid="uid://cr1ax7dt2173n"]
 
 [ext_resource type="Script" path="res://scripts/family_members/brother.gd" id="1_eoda7"]
 [ext_resource type="Texture2D" uid="uid://cfak2uq13hfui" path="res://Art/Characters/Custom_Characters.png" id="1_kgqsw"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="2_q33qh"]
+[ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="3_x7uv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nmjyo"]
 size = Vector2(12.4641, 15.0163)
@@ -44,6 +45,9 @@ scale = Vector2(0.164706, 0.1875)
 sprite_frames = SubResource("SpriteFrames_y8352")
 animation = &"walking"
 frame_progress = 0.204249
+
+[node name="indicator" parent="." instance=ExtResource("3_x7uv7")]
+position = Vector2(0, -12)
 
 [node name="dialogue" parent="." instance=ExtResource("2_q33qh")]
 visible = false
