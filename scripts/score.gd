@@ -24,7 +24,7 @@ func _ready() -> void:
 	$DeincrementTimer.start()
 	for npc in NPCs:
 		npc.connect("check_if_talked_to_all", _on_check_if_talked_to_all)
-		npc.talked_to = true
+	
 func _process(delta: float) -> void:
 	if not out_of_time and deincrement_score:
 		score -= 1
