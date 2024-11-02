@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://tdk1jptyw5bu"]
+[gd_scene load_steps=3 format=3 uid="uid://tdk1jptyw5bu"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
+[ext_resource type="AudioStream" uid="uid://d1eqhocmwf63o" path="res://assets/Chatter.mp3" id="2_boc4j"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_hwh3g")
@@ -9,5 +10,9 @@ script = ExtResource("1_hwh3g")
 
 [node name="DeincrementTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_boc4j")
+autoplay = true
 
 [connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]
