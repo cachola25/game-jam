@@ -35,3 +35,11 @@ func _on_deincrement_timer_timeout() -> void:
 
 func _on_main_character_talk() -> void:
 	is_talking = true
+
+
+func _on_drank_caneat() -> void:
+	pass # Replace with function body.
+
+
+func _on_drank_canteat() -> void:
+	pass # Replace with function body.
