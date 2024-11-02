@@ -1,25 +1,18 @@
-[gd_scene load_steps=23 format=4 uid="uid://bswtp6xt8pg6q"]
+[gd_scene load_steps=25 format=4 uid="uid://tdk1jptyw5bu"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
-[ext_resource type="Texture2D" uid="uid://cg4yhw1dvp1j6" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
-[ext_resource type="Texture2D" uid="uid://mhoxg817m8dl" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
-[ext_resource type="Texture2D" uid="uid://wvu2y2rcl045" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
-[ext_resource type="Texture2D" uid="uid://ckyv4jem2eod7" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
-[ext_resource type="Texture2D" uid="uid://ynceud43exnc" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
-[ext_resource type="Texture2D" uid="uid://dgje0lfhl88jn" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
+[ext_resource type="Texture2D" uid="uid://bsbgjagtf4j8t" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
+[ext_resource type="Texture2D" uid="uid://cbwgkhtavgnw8" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
+[ext_resource type="Texture2D" uid="uid://dtjnr7eh8ynif" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
+[ext_resource type="Texture2D" uid="uid://kdw2kewx34se" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
+[ext_resource type="Texture2D" uid="uid://rgsiyqnvt0bd" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
+[ext_resource type="Texture2D" uid="uid://cb8u3p343oiv2" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
 [ext_resource type="PackedScene" uid="uid://doofkr8gwcksj" path="res://scenes/main_character.tscn" id="8_s1j23"]
-[ext_resource type="PackedScene" uid="uid://b1nusu7rguvr5" path="res://scenes/family_members/grandpa.tscn" id="9_0vo5f"]
-[ext_resource type="PackedScene" uid="uid://cghqgxmvroxw1" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
-[ext_resource type="PackedScene" uid="uid://bvhqot71xpd2v" path="res://scenes/family_members/dad.tscn" id="9_duydu"]
-[ext_resource type="PackedScene" uid="uid://y70w4mgya087" path="res://scenes/family_members/boy_cousin.tscn" id="9_iw5qa"]
-[ext_resource type="PackedScene" uid="uid://cr1ax7dt2173n" path="res://scenes/family_members/brother.tscn" id="9_pnfjp"]
-[ext_resource type="PackedScene" uid="uid://ct14xtxpobaie" path="res://scenes/family_members/uncle.tscn" id="9_vtbma"]
-[ext_resource type="AudioStream" uid="uid://caw5rrw08jrod" path="res://Audio/Chatter.mp3" id="10_wndwr"]
-[ext_resource type="PackedScene" uid="uid://bdsow0c2c04ld" path="res://scenes/family_members/aunt.tscn" id="12_uf4tb"]
-[ext_resource type="PackedScene" uid="uid://c46rt7pokvoxn" path="res://scenes/family_members/girl_cousin.tscn" id="14_ncyia"]
-[ext_resource type="PackedScene" uid="uid://chacy0r45g5np" path="res://scenes/family_members/grandma.tscn" id="15_sduck"]
-[ext_resource type="PackedScene" uid="uid://bga1xfdps0aym" path="res://scenes/family_members/sister.tscn" id="18_6bw5m"]
-[ext_resource type="AudioStream" uid="uid://danv4aledr3k5" path="res://Audio/Chatter.mp3" id="10_wndwr"]
+[ext_resource type="PackedScene" uid="uid://b2a7mur5usdel" path="res://scenes/family_members/boy_cousin.tscn" id="9_iw5qa"]
+[ext_resource type="PackedScene" uid="uid://b2hatv8jok3f" path="res://scenes/family_members/brother.tscn" id="9_pnfjp"]
+[ext_resource type="AudioStream" uid="uid://d1eqhocmwf63o" path="res://Audio/Chatter.mp3" id="10_wndwr"]
+[ext_resource type="FontFile" uid="uid://bhi6tpsqkrkmc" path="res://assets/04B_30__.TTF" id="11_xirdk"]
+[ext_resource type="Texture2D" uid="uid://c4l0j0nrrywq3" path="res://assets/UI/input_square.png" id="12_shgte"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
 texture = ExtResource("2_80qsc")
@@ -1149,36 +1142,6 @@ position = Vector2(159, 277)
 [node name="brother" parent="." instance=ExtResource("9_pnfjp")]
 position = Vector2(326, 291)
 
-[node name="uncle" parent="." instance=ExtResource("9_vtbma")]
-position = Vector2(77, 320)
-
-[node name="aunt" parent="." instance=ExtResource("12_uf4tb")]
-position = Vector2(159, 314)
-
-[node name="dad" parent="." instance=ExtResource("9_duydu")]
-position = Vector2(300, 312)
-
-[node name="girl_cousin" parent="." instance=ExtResource("14_ncyia")]
-position = Vector2(577, 303)
-
-[node name="grandma" parent="." instance=ExtResource("15_sduck")]
-position = Vector2(582, 340)
-
-[node name="grandpa" parent="." instance=ExtResource("9_0vo5f")]
-position = Vector2(316, 353)
-
-[node name="mom" parent="." instance=ExtResource("9_6ejqo")]
-position = Vector2(149, 248)
-
-[node name="sister" parent="." instance=ExtResource("18_6bw5m")]
-position = Vector2(646, 272)
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="DeincrementTimer" type="Timer" parent="."]
-
 [node name="ChatterSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_wndwr")
 volume_db = 17.0
@@ -1187,6 +1150,30 @@ parameters/looping = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_xgnpd")
+
+[node name="Napkin" type="Sprite2D" parent="."]
+position = Vector2(66.5, 22.75)
+scale = Vector2(1.89062, 0.492188)
+texture = ExtResource("12_shgte")
+
+[node name="DeincrementTimer" type="Timer" parent="."]
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 14.75
+offset_right = 86.0
+offset_bottom = 37.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_xirdk")
+text = "Timer:"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 87.0
+offset_top = 14.75
+offset_right = 119.0
+offset_bottom = 32.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_xirdk")
 
 [connection signal="talk" from="MainCharacter" to="." method="_on_main_character_talk"]
 [connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]
