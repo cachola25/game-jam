@@ -64,6 +64,8 @@ func _on_player_response(family_npc, response):
 		grandpa_dialogue_options(family_npc, response, msg)
 	elif family_npc is uncle:
 		uncle_dialogue_options(family_npc, response, msg)
+	elif family_npc is brother:
+		brother_dialogue_options(family_npc, response, msg)
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -260,6 +262,33 @@ func uncle_dialogue_options(family_npc, response, msg):
 		if response == "Aren't you on bedrest?":
 			msg.append("Are you even fit to go down the stairs?")
 			msg.append("I want you 🫵🏻 to not get winded standing up.")
+			conversation_done = true
+			
+func brother_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "It's all I had.":
+			msg.append("Well, I didn't have any other shirt.")
+			msg.append("Dad wouldn't let me use the washing machince since I leave the lights on.")
+		elif response == "I actually really like this shirt.":
+			msg.append("I didn't bother with your adivce.")
+			msg.append("It's a shirt I like so I'm wearing it.")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "Results just aren't showing.":
+			msg.append("I have been going to the gym, you just can't tell.")
+			msg.append("I hit personal records on squat and bench the other day.")
+		elif response == "I don't care about the gym.":
+			msg.append("I don't bother going to the gym.")
+			msg.append("It's full of sweaty people and I don't want to get too bulky.")
+			family_npc.curr_message += 1
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("Yeah, I'll keep trying build more muscle haha.")
+			msg.append("(*whispers*) Can't believe he bought it.")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "I have other things to worry about.":
+			msg.append("I trying to survive with out the help of mom and dad.")
+			msg.append("I have more important things to worry about other than whatever you and sister think.")
 			conversation_done = true
 			
 func finish_conversation(family_npc):
