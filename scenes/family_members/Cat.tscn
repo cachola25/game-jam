@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjsyw68icqeh"]
+
+[ext_resource type="Texture2D" uid="uid://c6hcm76i3ln7n" path="res://Art/Characters/Custom_Characters.png" id="1_upwex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i1j8"]
+size = Vector2(8, 7.8125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1hk6"]
+atlas = ExtResource("1_upwex")
+region = Rect2(156, 426, 156, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bvb1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1hk6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cat" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 5.09375)
+shape = SubResource("RectangleShape2D_2i1j8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, 5)
+scale = Vector2(0.114699, 0.104094)
+sprite_frames = SubResource("SpriteFrames_bvb1k")

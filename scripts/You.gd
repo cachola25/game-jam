@@ -143,7 +143,7 @@ func aunt_dialogue_options(family_npc, response, msg):
 	if family_npc.curr_message - 1 == 0:
 		if response == "Why are you dressed like that?":
 			msg.append("Not sure, but why do you always dress like a goblin?")
-		elif response == "Sorry, it's how I like to dress":
+		elif response == "Sorry, it's how I like to dress.":
 			msg.append("I dress how I would like to.")
 			msg.append("I'm sorry if you think it's bad.")
 	elif family_npc.curr_message - 1 == 1:

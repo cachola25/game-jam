@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ga45jmyo4haq"]
+
+[ext_resource type="Texture2D" uid="uid://c6hcm76i3ln7n" path="res://Art/Characters/Custom_Characters.png" id="1_ivjw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snas4"]
+size = Vector2(18, 9.625)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5svhn"]
+atlas = ExtResource("1_ivjw1")
+region = Rect2(305, 428, 152, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0oo3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5svhn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dog" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, 5.1875)
+shape = SubResource("RectangleShape2D_snas4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10.4375, 5.60938)
+scale = Vector2(0.165296, 0.151849)
+sprite_frames = SubResource("SpriteFrames_0oo3l")
