@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/family_members/uncle.gd" id="1_xh8ri"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_yriue"]
-[ext_resource type="Texture2D" uid="uid://dgmcrs01jl20a" path="res://Art/Characters/Custom_Characters2.png" id="2_jt3at"]
+[ext_resource type="Texture2D" uid="uid://e8stb4lvy0le" path="res://Art/Characters/Custom_Characters2.png" id="2_jt3at"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njnol"]
 size = Vector2(11.3122, 15.9688)
