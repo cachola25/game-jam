@@ -10,7 +10,7 @@ extends Node2D
 func _ready() -> void:
 	score = 60
 	deincrement_score = false
-	is_talking = true
+	is_talking = false
 	out_of_time = false
 	ate = false
 	drank = false
