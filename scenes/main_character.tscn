@@ -28,4 +28,3 @@ wait_time = 0.5
 one_shot = true
 
 [connection signal="timeout" from="response_timer" to="." method="_on_response_timer_timeout"]
-
