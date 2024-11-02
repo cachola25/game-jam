@@ -1,6 +1,6 @@
 extends family_member
 
-class_name mom
+class_name grandma
 
 var curr_message = 0
 var messages = [
@@ -12,12 +12,9 @@ var messages = [
 		"Why can't you be more like her?"
 	],
 	[
-		"Well, at least you don't date stupid people like her."
-	],
-	[
 		"Are you watching what you eat?",
 		"You look like you're letting yourself go."
-	],
+	]
 ]
 
 var player_responses = [
@@ -28,9 +25,6 @@ var player_responses = [
 	[
 		"Why can't you be more like yours?",
 		"I'm just being myself."
-	],
-	[
-		"*Leave Convo*"
 	],
 	[
 		"Are you watching what you cook?"

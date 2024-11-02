@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://huv3vwhevyul" path="res://assets/UI/icon_play_outline.png" id="4_ic0ux"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pa6md"]
+line_spacing = 1.0
 font_size = 2
 font_color = Color(0, 0, 0, 1)
 

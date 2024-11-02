@@ -37,6 +37,8 @@ func stop_dialogue():
 	$next_message.stop()
 
 func _on_next_char_timeout():
+	if len(messages) <= 0:
+		return
 	if (current_char < len(messages[current_message])):
 		var next_char = messages[current_message][current_char]
 		display += next_char
@@ -50,6 +52,8 @@ func _on_next_char_timeout():
 		$next_message.start()
 
 func _on_next_message_timeout():
+	if len(messages) <= 0:
+		return
 	if (current_message == len(messages) - 1):
 		var options = get_parent().player_responses[current_message_idx]
 		var index = 0

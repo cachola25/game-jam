@@ -69,11 +69,15 @@ func mom_dialogue_options(family_npc, response, msg):
 		if response == "Why can't you be more like yours?":
 			msg.append("Your sister doesn't complain as much as you do.")
 			msg.append("Why can't you be more like yours?")
+			family_npc.curr_message += 1
 		elif response == "I'm just being myself.":
 			msg.append("I'm sorry, I'm just being myself.")
 			msg.append("But, I'm glad you both get along great.")
-			conversation_done = true
 	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("Mmhmm, goodbye")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
 		if response == "Are you watching what you cook?":
 			msg.append("Are you watching any cooking shows? You could really use some help in the kitchen")
 			msg.append("At least I know how to cook something that I would want to eat.")
