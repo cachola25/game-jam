@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://wgfol33yfdib"]
+
+[ext_resource type="Script" path="res://scripts/HelpScreen.gd" id="1_pb1ug"]
+[ext_resource type="Texture2D" uid="uid://chu2kgyq4jq30" path="res://assets/ThanksgivingBackground.png" id="2_kgknn"]
+[ext_resource type="Texture2D" uid="uid://bk6v2vkdnr7nm" path="res://assets/Napkin.png" id="3_vo25u"]
+[ext_resource type="FontFile" uid="uid://by70bc5fgwg8x" path="res://assets/Meginta.ttf" id="4_51mfi"]
+
+[node name="HelpScreen" type="Node2D"]
+script = ExtResource("1_pb1ug")
+
+[node name="ThanksgivingBackground" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.5, 1.26562)
+texture = ExtResource("2_kgknn")
+
+[node name="Napkin" type="Sprite2D" parent="."]
+position = Vector2(576.5, 326.5)
+scale = Vector2(1.12604, 1.07621)
+texture = ExtResource("3_vo25u")
+
+[node name="ReturnButton" type="Button" parent="."]
+offset_left = 979.0
+offset_top = 551.0
+offset_right = 1103.0
+offset_bottom = 603.0
+text = "Return
+"
+
+[node name="Help" type="Label" parent="."]
+offset_left = 482.0
+offset_top = 38.0
+offset_right = 652.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_51mfi")
+theme_override_font_sizes/font_size = 100
+text = "Help"
+
+[node name="Description" type="Label" parent="."]
+offset_left = 51.0
+offset_top = 142.0
+offset_right = 1097.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_51mfi")
+theme_override_font_sizes/font_size = 46
+text = "Welcome! To thanksgiving with your family. You may try to make it 
+without talking to your squabbling relatives but time is of the essence and
+if you don't talk to everyone, you may not make it to dinner....
+
+WASD  - Move in corresponding direction
+
+Click - Choose an option when talking to a disgruntled family member
+
+E - Interact
+"
+
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
