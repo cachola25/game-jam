@@ -62,6 +62,8 @@ func _on_player_response(family_npc, response):
 		dad_dialogue_options(family_npc, response, msg)
 	elif family_npc is grandpa:
 		grandpa_dialogue_options(family_npc, response, msg)
+	elif family_npc is uncle:
+		uncle_dialogue_options(family_npc, response, msg)
 	family_npc.get_node("dialogue").visible = false
 	$player_dialogue.visible = true
 	$player_dialogue.curr_npc = family_npc
@@ -234,6 +236,30 @@ func grandpa_dialogue_options(family_npc, response, msg):
 		if response == "Not now, grandpa...":
 			msg.append("Get with the times, grandpa.")
 			msg.append("I don't have time for this today, goodbye.")
+			conversation_done = true
+
+func uncle_dialogue_options(family_npc, response, msg):
+	if family_npc.curr_message - 1 == 0:
+		if response == "I will never enlist.":
+			msg.append("Sorry uncle, don't really feel like sacraficing my life for oil.")
+		elif response == "I sure have...":
+			msg.append("Yep, I defintely have.")
+			msg.append("I'm definitely not lying through my teeth right now.")
+	elif family_npc.curr_message - 1 == 1:
+		if response == "Okay, I promse I'll enlist.":
+			msg.append("Okay, fine. If it gets you off of my back. I'll enlist.")
+			msg.append("(*whispers under my breath*) Just kidding lol.")
+		elif response == "No matter how many times you ask...":
+			msg.append("I just told you. You can ask one hundred more times and the answer is still NO")
+			family_npc.curr_message += 1
+	elif family_npc.curr_message - 1 == 2:
+		if response == "*Leave Convo*":
+			msg.append("Aye, Aye Captain!")
+			conversation_done = true
+	elif family_npc.curr_message - 1 == 3:
+		if response == "Aren't you on bedrest?":
+			msg.append("Are you even fit to go down the stairs?")
+			msg.append("I want you 🫵🏻 to not get winded standing up.")
 			conversation_done = true
 			
 func finish_conversation(family_npc):
