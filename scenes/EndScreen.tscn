@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://daqms26yrmocr"]
+[gd_scene load_steps=3 format=3 uid="uid://daqms26yrmocr"]
 
 [ext_resource type="Script" path="res://scripts/EndScreen.gd" id="1_whtnr"]
+[ext_resource type="Texture2D" uid="uid://chu2kgyq4jq30" path="res://assets/ThanksgivingBackground.png" id="2_dr1ly"]
 
 [node name="EndScreen" type="Node2D"]
 script = ExtResource("1_whtnr")
+
+[node name="ThanksgivingBackground" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.5, 1.26562)
+texture = ExtResource("2_dr1ly")
 
 [node name="RestartButton" type="Button" parent="."]
 offset_left = 268.0
@@ -18,6 +24,14 @@ offset_top = 430.0
 offset_right = 912.0
 offset_bottom = 505.0
 text = "Quit"
+
+[node name="Title" type="Label" parent="."]
+offset_left = 309.0
+offset_top = 202.0
+offset_right = 860.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 100
+text = "Kin Konflict"
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
