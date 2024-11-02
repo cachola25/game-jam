@@ -963,8 +963,9 @@ offset_bottom = 23.0
 
 [node name="DeincrementTimer" type="Timer" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="ChatterSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_wndwr")
+volume_db = 17.0
 autoplay = true
 parameters/looping = true
 

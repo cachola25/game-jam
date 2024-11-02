@@ -36,7 +36,7 @@ theme_override_fonts/font = ExtResource("3_kynsj")
 theme_override_font_sizes/font_size = 110
 text = "Face them again?"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="SadSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ff6t6")
 autoplay = true
 
