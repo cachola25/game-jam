@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ckyv4jem2eod7" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
 [ext_resource type="Texture2D" uid="uid://ynceud43exnc" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
 [ext_resource type="Texture2D" uid="uid://dgje0lfhl88jn" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
-[ext_resource type="PackedScene" uid="uid://bihir6cvi5k0v" path="res://scenes/main_character.tscn" id="8_s1j23"]
+[ext_resource type="PackedScene" uid="uid://doofkr8gwcksj" path="res://scenes/main_character.tscn" id="8_s1j23"]
 [ext_resource type="PackedScene" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
@@ -951,6 +951,7 @@ tile_map_data = PackedByteArray("AAAdABIAAwABAAYAAAAfABQAAwADAAYAAAAeABMAAwAFAAc
 tile_set = SubResource("TileSet_fix5s")
 
 [node name="MainCharacter" parent="." instance=ExtResource("8_s1j23")]
+position = Vector2(411, 341)
 
 [node name="mom" parent="." instance=ExtResource("9_6ejqo")]
 position = Vector2(496, 341)
