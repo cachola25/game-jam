@@ -4,28 +4,29 @@ extends Node2D
 @onready var is_talking
 @onready var out_of_time
 @onready var deincrement_score
-@onready var ate
-@onready var drank
+@onready var ate1 = false
+@onready var ate2 = false
+@onready var ate3 = false
+@onready var drank1 = false
+@onready var drank2 = false
+@onready var drank3 = false
+@onready var drank4 = false
+signal consumed
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	score = 60
 	deincrement_score = false
 	is_talking = false
 	out_of_time = false
-	ate = false
-	drank = false
 	$DeincrementTimer.start()
 func _process(delta: float) -> void:
 	if not out_of_time and deincrement_score:
 		score -= 1
 		$Label.text = str(score)
 		deincrement_score = false
-	if ate or drank or is_talking:
-		ate = false
-		drank = false
+	if is_talking:
 		is_talking = false
 		score += 50
-
 
 func _on_deincrement_timer_timeout() -> void:
 	deincrement_score = true
@@ -38,8 +39,86 @@ func _on_main_character_talk() -> void:
 
 
 func _on_drank_caneat() -> void:
-	pass # Replace with function body.
-
+	$ConsumeTimer.start()
+	drank1 = true
 
 func _on_drank_canteat() -> void:
-	pass # Replace with function body.
+	$ConsumeTimer.stop()
+	drank1 = false
+
+
+func _on_drank_2_caneat() -> void:
+	$ConsumeTimer.start()
+	drank2 = true
+	
+func _on_drank_2_canteat() -> void:
+	$ConsumeTimer.stop()
+	drank2 = false
+
+
+func _on_consume_timer_timeout() -> void:
+	score += 7
+	if drank1:
+		$Drank.queue_free()
+	elif drank2:
+		$Drank2.queue_free()
+	elif drank3:
+		$Drank3.queue_free()
+	elif drank4:
+		$Drank4.queue_free()
+	elif ate1:
+		$Drank5.queue_free()
+	elif ate2:
+		$Drank6.queue_free()
+	elif ate3:
+		$Drank7.queue_free()
+
+
+func _on_drank_3_caneat() -> void:
+	$ConsumeTimer.start()
+	drank3 = true
+
+
+func _on_drank_3_canteat() -> void:
+	$ConsumeTimer.stop()
+	drank3 = false
+
+
+func _on_drank_4_caneat() -> void:
+	$ConsumeTimer.start()
+	drank4 = true
+
+
+func _on_drank_4_canteat() -> void:
+	$ConsumeTimer.stop()
+	drank4 = false
+
+
+func _on_drank_5_caneat() -> void:
+	$ConsumeTimer.start()
+	ate1 = true
+
+
+func _on_drank_5_canteat() -> void:
+	$ConsumeTimer.stop()
+	ate1 = false
+
+
+func _on_drank_6_caneat() -> void:
+	$ConsumeTimer.start()
+	ate2 = true
+
+
+func _on_drank_6_canteat() -> void:
+	$ConsumeTimer.stop()
+	ate2 = false
+
+
+func _on_drank_7_caneat() -> void:
+	$ConsumeTimer.start()
+	ate3 = true
+
+
+func _on_drank_7_canteat() -> void:
+	$ConsumeTimer.stop()
+	ate3 = false

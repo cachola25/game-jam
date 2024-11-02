@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://tdk1jptyw5bu"]
+[gd_scene load_steps=26 format=4 uid="uid://tdk1jptyw5bu"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
 [ext_resource type="Texture2D" uid="uid://bsygd2fpmspbg" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
@@ -10,8 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://doofkr8gwcksj" path="res://scenes/main_character.tscn" id="8_s1j23"]
 [ext_resource type="PackedScene" uid="uid://y70w4mgya087" path="res://scenes/family_members/boy_cousin.tscn" id="9_iw5qa"]
 [ext_resource type="PackedScene" uid="uid://cr1ax7dt2173n" path="res://scenes/family_members/brother.tscn" id="9_pnfjp"]
-[ext_resource type="PackedScene" path="res://scripts/food.tscn" id="10_mv7gq"]
+[ext_resource type="PackedScene" uid="uid://dtiyehegxwa1g" path="res://scripts/food.tscn" id="10_mv7gq"]
 [ext_resource type="AudioStream" uid="uid://k0a5seygftwt" path="res://Audio/Chatter.mp3" id="10_wndwr"]
+[ext_resource type="PackedScene" uid="uid://c60n80x7o3ggh" path="res://scripts/drank.tscn" id="13_177jg"]
+[ext_resource type="PackedScene" uid="uid://lh0gmv8ehoi1" path="res://scripts/meal.tscn" id="14_2dhis"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3rqe"]
 texture = ExtResource("2_80qsc")
@@ -921,6 +923,15 @@ sources/3 = SubResource("TileSetAtlasSource_mpkso")
 sources/4 = SubResource("TileSetAtlasSource_cd1a0")
 sources/5 = SubResource("TileSetAtlasSource_gjv4w")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8c02"]
+size = Vector2(705, 242)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr338"]
+size = Vector2(707, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svmk2"]
+size = Vector2(22, 419.5)
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_xgnpd"]
 vertices = PackedVector2Array(69, 244.453, 119.992, 241.617, 119.07, 251.82, 69, 285.18, 694.211, 345, 694.781, 372, 12.0938, 372, 678.469, 345, 12.8984, 284.172, 199.32, 253.141, 201.352, 241.938, 328, 241.062, 328, 258.906, 674.461, 261.906)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(7, 6, 8, 3), PackedInt32Array(7, 3, 2, 9), PackedInt32Array(10, 11, 12), PackedInt32Array(7, 9, 10, 12), PackedInt32Array(7, 12, 13)])
@@ -957,6 +968,26 @@ polygon = PackedVector2Array(646, 293, 646, 304, 647, 316, 665, 316, 666, 304, 6
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer3/Stairs"]
 polygon = PackedVector2Array(0, 182, 9, 182, 58, 232, 58, 256, 0, 256)
+
+[node name="Wall" type="StaticBody2D" parent="Layer3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3/Wall"]
+position = Vector2(352.5, 109)
+shape = SubResource("RectangleShape2D_e8c02")
+
+[node name="Floor" type="StaticBody2D" parent="Layer3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3/Floor"]
+position = Vector2(352, 402)
+shape = SubResource("RectangleShape2D_vr338")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Layer3/Floor"]
+position = Vector2(-11, 197.5)
+shape = SubResource("RectangleShape2D_svmk2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Layer3/Floor"]
+position = Vector2(715, 197)
+shape = SubResource("RectangleShape2D_svmk2")
 
 [node name="Layer4" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -1131,7 +1162,41 @@ navigation_polygon = SubResource("NavigationPolygon_xgnpd")
 position = Vector2(224, 319)
 
 [node name="Drank2" parent="." instance=ExtResource("10_mv7gq")]
-position = Vector2(694, 280)
+position = Vector2(694, 288)
 
+[node name="ConsumeTimer" type="Timer" parent="."]
+
+[node name="Drank3" parent="." instance=ExtResource("13_177jg")]
+position = Vector2(429, 219)
+
+[node name="Drank4" parent="." instance=ExtResource("13_177jg")]
+position = Vector2(474, 328)
+
+[node name="Drank5" parent="." instance=ExtResource("14_2dhis")]
+position = Vector2(41, 325)
+
+[node name="Drank6" parent="." instance=ExtResource("14_2dhis")]
+position = Vector2(159, 319)
+
+[node name="Drank7" parent="." instance=ExtResource("14_2dhis")]
+position = Vector2(632, 217)
+
+[connection signal="consumed" from="." to="Drank" method="_on_main_consumed"]
+[connection signal="consumed" from="." to="Drank2" method="_on_main_consumed"]
 [connection signal="talk" from="MainCharacter" to="." method="_on_main_character_talk"]
 [connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]
+[connection signal="caneat" from="Drank" to="." method="_on_drank_caneat"]
+[connection signal="canteat" from="Drank" to="." method="_on_drank_canteat"]
+[connection signal="caneat" from="Drank2" to="." method="_on_drank_2_caneat"]
+[connection signal="canteat" from="Drank2" to="." method="_on_drank_2_canteat"]
+[connection signal="timeout" from="ConsumeTimer" to="." method="_on_consume_timer_timeout"]
+[connection signal="caneat" from="Drank3" to="." method="_on_drank_3_caneat"]
+[connection signal="canteat" from="Drank3" to="." method="_on_drank_3_canteat"]
+[connection signal="caneat" from="Drank4" to="." method="_on_drank_4_caneat"]
+[connection signal="canteat" from="Drank4" to="." method="_on_drank_4_canteat"]
+[connection signal="caneat" from="Drank5" to="." method="_on_drank_5_caneat"]
+[connection signal="canteat" from="Drank5" to="." method="_on_drank_5_canteat"]
+[connection signal="caneat" from="Drank6" to="." method="_on_drank_6_caneat"]
+[connection signal="canteat" from="Drank6" to="." method="_on_drank_6_canteat"]
+[connection signal="caneat" from="Drank7" to="." method="_on_drank_7_caneat"]
+[connection signal="canteat" from="Drank7" to="." method="_on_drank_7_canteat"]

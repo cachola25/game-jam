@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://lh0gmv8ehoi1"]
+
+[ext_resource type="PackedScene" uid="uid://dtiyehegxwa1g" path="res://scripts/food.tscn" id="1_qpa37"]
+[ext_resource type="Texture2D" uid="uid://ddhnv1x4lfy6r" path="res://Art/Top-Down_Retro_Interior/food.png" id="2_35udx"]
+[ext_resource type="Texture2D" uid="uid://b5pua6xsc00jy" path="res://Art/Top-Down_Retro_Interior/pixil-frame-0 (6).png" id="3_v3xaa"]
+
+[node name="Drank" instance=ExtResource("1_qpa37")]
+
+[node name="Unhighlighted" parent="." index="0"]
+texture = ExtResource("2_35udx")
+
+[node name="Highlighted" parent="." index="2"]
+texture = ExtResource("3_v3xaa")
