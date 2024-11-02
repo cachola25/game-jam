@@ -6,6 +6,8 @@ extends Node2D
 @onready var deincrement_score
 @onready var ate
 @onready var drank
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	score = 60
@@ -25,6 +27,9 @@ func _process(delta: float) -> void:
 		drank = false
 		is_talking = false
 		score += 50
+		
+	if score == 0:
+		get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")
 
 
 func _on_deincrement_timer_timeout() -> void:

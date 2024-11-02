@@ -1174,6 +1174,7 @@ offset_right = 119.0
 offset_bottom = 32.75
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_xirdk")
+text = "60"
 
 [connection signal="talk" from="MainCharacter" to="." method="_on_main_character_talk"]
 [connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]

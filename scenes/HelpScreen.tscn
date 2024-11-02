@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/HelpScreen.gd" id="1_pb1ug"]
 [ext_resource type="Texture2D" uid="uid://b2aw0ylwun5ci" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="2_05bfp"]
-[ext_resource type="Texture2D" uid="uid://c4l0j0nrrywq3" path="res://assets/UI/input_square.png" id="3_83fwh"]
+[ext_resource type="Texture2D" uid="uid://bn6gfjlgkvoni" path="res://Green.jpg" id="3_6fg4f"]
 [ext_resource type="FontFile" uid="uid://bhi6tpsqkrkmc" path="res://assets/04B_30__.TTF" id="4_bk743"]
 
 [node name="HelpScreen" type="Node2D"]
@@ -13,21 +13,31 @@ position = Vector2(350.771, 192.313)
 scale = Vector2(0.174615, 0.170388)
 texture = ExtResource("2_05bfp")
 
-[node name="Napkin" type="Sprite2D" parent="."]
-position = Vector2(356, 231)
-scale = Vector2(9.8125, 4.21875)
-texture = ExtResource("3_83fwh")
+[node name="Green" type="Sprite2D" parent="."]
+position = Vector2(347, 219)
+scale = Vector2(0.987539, 0.744444)
+texture = ExtResource("3_6fg4f")
+
+[node name="Help" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 6.0
+offset_right = 485.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.745098, 0.345098, 0, 1)
+theme_override_fonts/font = ExtResource("4_bk743")
+theme_override_font_sizes/font_size = 80
+text = "Help"
+metadata/_edit_use_anchors_ = true
 
 [node name="Description" type="Label" parent="."]
-offset_left = 87.0
-offset_top = 116.0
-offset_right = 1133.0
-offset_bottom = 563.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 15
+offset_left = 44.0
+offset_top = 87.0
+offset_right = 650.0
+offset_bottom = 345.0
+theme_override_font_sizes/font_size = 18
 text = "Welcome! To thanksgiving with your family. You may try to make it 
-without talking to your squabbling relatives but time is of the essence and
-if you don't talk to everyone, you may not make it to dinner....
+without talking to your squabbling relatives but time is of the essence
+and if you don't talk to everyone, you may not make it to dinner....
 
 WASD  - Move in corresponding direction
 
@@ -35,24 +45,12 @@ Click - Choose an option when talking to a disgruntled family member
 
 E - Interact
 "
-metadata/_edit_use_anchors_ = true
-
-[node name="Help" type="Label" parent="."]
-offset_left = 247.0
-offset_top = 18.0
-offset_right = 515.0
-offset_bottom = 118.0
-theme_override_colors/font_color = Color(0.745098, 0.345098, 0, 1)
-theme_override_fonts/font = ExtResource("4_bk743")
-theme_override_font_sizes/font_size = 80
-text = "Help"
-metadata/_edit_use_anchors_ = true
 
 [node name="ReturnButton" type="Button" parent="."]
-offset_left = 479.0
-offset_top = 290.0
-offset_right = 603.0
-offset_bottom = 342.0
+offset_left = 504.0
+offset_top = 294.0
+offset_right = 628.0
+offset_bottom = 346.0
 text = "Return
 "
 metadata/_edit_use_anchors_ = true
