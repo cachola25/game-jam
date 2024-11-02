@@ -4,7 +4,7 @@ const SPEED = 300.0
 
 var talking = false
 var collider
-
+signal talk
 func _process(delta: float) -> void:
 		
 	var direction = Vector2.ZERO # (0,0d)
@@ -28,6 +28,6 @@ func _process(delta: float) -> void:
 	if collider and Input.is_action_just_pressed("interact"):
 		start_conversation(collider)
 		talking = true
-	
+		talk.emit()
 func start_conversation(family_member):
 	family_member.get_node("dialogue").start_dialogue(family_member.messages)

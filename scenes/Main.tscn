@@ -951,4 +951,5 @@ offset_bottom = 23.0
 
 [node name="DeincrementTimer" type="Timer" parent="."]
 
+[connection signal="talk" from="MainCharacter" to="." method="_on_main_character_talk"]
 [connection signal="timeout" from="DeincrementTimer" to="." method="_on_deincrement_timer_timeout"]
