@@ -959,9 +959,6 @@ tile_set = SubResource("TileSet_fix5s")
 [node name="MainCharacter" parent="." instance=ExtResource("8_s1j23")]
 position = Vector2(411, 341)
 
-[node name="uncle" parent="." instance=ExtResource("9_vtbma")]
-position = Vector2(495, 305)
-
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
