@@ -47,10 +47,18 @@ animation = &"walking"
 frame_progress = 0.775094
 
 [node name="indicator" parent="." instance=ExtResource("3_ral7t")]
-position = Vector2(0, -13)
+position = Vector2(0, -17)
 
 [node name="dialogue" parent="." instance=ExtResource("1_3c88u")]
 visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -13.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 5
+text = "Aunt Karen"

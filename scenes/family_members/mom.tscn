@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cghqgxmvroxw1"]
 
 [ext_resource type="Script" path="res://scripts/family_members/mom.gd" id="1_y8b0l"]
-[ext_resource type="Texture2D" uid="uid://cfak2uq13hfui" path="res://Art/Characters/Custom_Characters.png" id="2_3uo0x"]
-[ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="3_6hbk3"]
+[ext_resource type="Texture2D" uid="uid://c6hcm76i3ln7n" path="res://Art/Characters/Custom_Characters.png" id="2_3uo0x"]
+[ext_resource type="PackedScene" path="res://scenes/indicator.tscn" id="3_6hbk3"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="3_u5w5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvtms"]
@@ -47,10 +47,18 @@ animation = &"walking"
 frame_progress = 0.756132
 
 [node name="indicator" parent="." instance=ExtResource("3_6hbk3")]
-position = Vector2(0, -13)
+position = Vector2(0, -17)
 
 [node name="dialogue" parent="." instance=ExtResource("3_u5w5k")]
 visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -7.0
+offset_top = -15.0
+offset_right = 33.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 5
+text = "Mom"
