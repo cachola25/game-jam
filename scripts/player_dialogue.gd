@@ -3,8 +3,8 @@ extends Node2D
 signal done
 
 var messages = []
-var typing_speed = .05
-var read_time = 3.0
+var typing_speed = .03
+var read_time = 2.0
 
 var current_message = 0
 var display = ""
