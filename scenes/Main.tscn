@@ -1782,7 +1782,7 @@ polygon = PackedVector2Array(212, 320, 212, 327, 214, 328, 235, 328, 236, 327, 2
 [node name="Couch 3" type="StaticBody2D" parent="Layer4"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer4/Couch 3"]
-polygon = PackedVector2Array(205, 352, 203, 352, 201, 352, 200, 352, 200, 358, 201, 359, 201, 364, 203, 364, 206, 364, 209, 364, 214, 364, 220, 364, 228, 364, 236, 364, 238, 364, 240, 364, 241, 364, 243, 364, 244, 364, 245, 364, 246, 364, 247, 364, 247, 364, 248, 364, 248, 359, 249, 359, 249, 352, 246, 352, 245, 352, 244, 352, 242, 352, 239, 352, 234, 352, 230, 352, 226, 352, 222, 352, 218, 352, 214, 352, 211, 352, 208, 352)
+polygon = PackedVector2Array(205, 352, 203, 352, 201, 352, 200, 352, 200, 358, 201, 359, 201, 361, 248, 361, 248, 359, 249, 359, 249, 352, 246, 352, 211, 352)
 
 [node name="Stereo stuff" type="StaticBody2D" parent="Layer4"]
 
@@ -1853,7 +1853,7 @@ polygon = PackedVector2Array(112, 302, 112, 330, 114, 330, 113, 337, 115, 337, 1
 [node name="Couch S" type="StaticBody2D" parent="Layer5"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer5/Couch S"]
-polygon = PackedVector2Array(154, 352, 150, 352, 146, 352, 144, 352, 144, 358, 146, 358, 146, 364, 149, 364, 154, 364, 160, 364, 165, 364, 167, 364, 172, 364, 175, 364, 175, 359, 176, 359, 176, 352, 172, 352, 168, 352, 162, 352, 157, 352)
+polygon = PackedVector2Array(146, 352, 144, 352, 144, 358, 146, 358, 146, 361, 175, 361, 175, 359, 176, 359, 176, 352, 162, 352)
 
 [node name="Side Table" type="StaticBody2D" parent="Layer5"]
 
