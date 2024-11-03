@@ -78,7 +78,6 @@ layout_mode = 0
 offset_top = -1.0
 offset_right = 36.0
 offset_bottom = 3.0
-theme_override_fonts/font = ExtResource("3_1ymlc")
 label_settings = SubResource("LabelSettings_y146x")
 
 [node name="response_button" type="TextureButton" parent="response_1"]
@@ -113,7 +112,6 @@ offset_left = -10.0
 offset_top = -5.0
 offset_right = 26.0
 offset_bottom = -1.0
-theme_override_fonts/font = ExtResource("3_1ymlc")
 label_settings = SubResource("LabelSettings_amiom")
 
 [node name="response_button" type="TextureButton" parent="response_2"]
