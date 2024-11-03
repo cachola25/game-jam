@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		deincrement_score = false
 	if is_talking:
 		is_talking = false
-		score += 60
+		score += 30
 	if score == 0:
 		out_of_time = true
 		get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")
@@ -65,7 +65,7 @@ func _on_drank_2_canteat() -> void:
 
 
 func _on_consume_timer_timeout() -> void:
-	score += 30
+	score += 60
 	if drank1:
 		$Drank.queue_free()
 	elif drank2:
