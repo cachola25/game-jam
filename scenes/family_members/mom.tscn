@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cghqgxmvroxw1"]
+[gd_scene load_steps=10 format=3 uid="uid://cghqgxmvroxw1"]
 
 [ext_resource type="Script" path="res://scripts/family_members/mom.gd" id="1_y8b0l"]
-[ext_resource type="Texture2D" uid="uid://cfak2uq13hfui" path="res://Art/Characters/Custom_Characters.png" id="2_3uo0x"]
+[ext_resource type="Texture2D" uid="uid://ctw4d35snpcas" path="res://Art/Characters/Custom_Characters.png" id="2_3uo0x"]
 [ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="3_6hbk3"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="3_u5w5k"]
+[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="5_mtr04"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvtms"]
 size = Vector2(14.8656, 16)
@@ -47,10 +48,20 @@ animation = &"walking"
 frame_progress = 0.756132
 
 [node name="indicator" parent="." instance=ExtResource("3_6hbk3")]
-position = Vector2(0, -13)
+position = Vector2(0, -17)
 
 [node name="dialogue" parent="." instance=ExtResource("3_u5w5k")]
 visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -6.0
+offset_top = -13.0
+offset_right = 38.0
+offset_bottom = 10.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_mtr04")
+text = "Mom"

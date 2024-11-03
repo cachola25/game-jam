@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1nusu7rguvr5"]
+[gd_scene load_steps=10 format=3 uid="uid://b1nusu7rguvr5"]
 
 [ext_resource type="Script" path="res://scripts/family_members/grandpa.gd" id="1_cyjls"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_ri5oq"]
-[ext_resource type="Texture2D" uid="uid://c23dwqfmuuoja" path="res://Art/Characters/Custom_Characters2.png" id="2_c8b7t"]
+[ext_resource type="Texture2D" uid="uid://cn52dtlr2lgqu" path="res://Art/Characters/Custom_Characters2.png" id="2_c8b7t"]
 [ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="3_ob3uq"]
+[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="5_07ox4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qynpd"]
 size = Vector2(13.2515, 14.9042)
@@ -47,10 +48,20 @@ animation = &"walking"
 frame_progress = 0.909542
 
 [node name="indicator" parent="." instance=ExtResource("3_ob3uq")]
-position = Vector2(0, -12)
+position = Vector2(0, -15)
 
 [node name="dialogue" parent="." instance=ExtResource("1_ri5oq")]
 visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -11.0
+offset_right = 142.0
+offset_bottom = 12.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_07ox4")
+text = "Grandpa Bart"
