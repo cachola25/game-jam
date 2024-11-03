@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bga1xfdps0aym"]
+[gd_scene load_steps=10 format=3 uid="uid://bga1xfdps0aym"]
 
 [ext_resource type="Script" path="res://scripts/family_members/sister.gd" id="1_csqa0"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_oe30e"]
-[ext_resource type="Texture2D" uid="uid://cfak2uq13hfui" path="res://Art/Characters/Custom_Characters.png" id="2_q1lcj"]
+[ext_resource type="Texture2D" uid="uid://ctw4d35snpcas" path="res://Art/Characters/Custom_Characters.png" id="2_q1lcj"]
 [ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="3_yi1co"]
+[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="5_s6tue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ad1k"]
 size = Vector2(13.8979, 16.1781)
@@ -47,10 +48,21 @@ animation = &"walking"
 frame_progress = 0.303382
 
 [node name="indicator" parent="." instance=ExtResource("3_yi1co")]
-position = Vector2(0, -12)
+position = Vector2(0, -16)
 
 [node name="dialogue" parent="." instance=ExtResource("1_oe30e")]
 visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -12.0
+offset_right = 162.0
+offset_bottom = 11.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_s6tue")
+text = "Sister Crystal
+"

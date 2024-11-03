@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ct14xtxpobaie"]
+[gd_scene load_steps=10 format=3 uid="uid://ct14xtxpobaie"]
 
 [ext_resource type="Script" path="res://scripts/family_members/uncle.gd" id="1_xh8ri"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_yriue"]
-[ext_resource type="Texture2D" uid="uid://e8stb4lvy0le" path="res://Art/Characters/Custom_Characters2.png" id="2_jt3at"]
-[ext_resource type="PackedScene" path="res://scenes/indicator.tscn" id="3_ocyj2"]
+[ext_resource type="Texture2D" uid="uid://cn52dtlr2lgqu" path="res://Art/Characters/Custom_Characters2.png" id="2_jt3at"]
+[ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="3_ocyj2"]
+[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="5_s2khe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njnol"]
 size = Vector2(21, 21.2148)
@@ -46,10 +47,21 @@ animation = &"walking"
 frame_progress = 0.831328
 
 [node name="indicator" parent="." instance=ExtResource("3_ocyj2")]
-position = Vector2(0, -16)
+position = Vector2(0, -18)
 
 [node name="dialogue" parent="." instance=ExtResource("1_yriue")]
 visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -17.0
+offset_top = -15.0
+offset_right = 145.0
+offset_bottom = 8.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_s2khe")
+text = "Uncle Sam
+"
