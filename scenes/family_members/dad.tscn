@@ -47,10 +47,18 @@ animation = &"walking"
 frame_progress = 0.529293
 
 [node name="indicator" parent="." instance=ExtResource("3_i0k2m")]
-position = Vector2(0, -12)
+position = Vector2(0, -17)
 
 [node name="dialogue" parent="." instance=ExtResource("1_6lf85")]
 visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -5.0
+offset_top = -15.0
+offset_right = 35.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 5
+text = "Dad"
