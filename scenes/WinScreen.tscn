@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://yelug4yp4gbt"]
+[gd_scene load_steps=11 format=3 uid="uid://c01klnriqycmm"]
 
-[ext_resource type="Texture2D" uid="uid://6j077gycg6f" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="1_c21xf"]
+[ext_resource type="Texture2D" uid="uid://dxkh1ap04rxig" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="1_c21xf"]
 [ext_resource type="Script" path="res://scripts/WinningScore.gd" id="1_ce8ss"]
-[ext_resource type="Texture2D" uid="uid://cgd052lhc3i2f" path="res://assets/UI/button_rectangle_depth_line.png" id="2_w7ahu"]
-[ext_resource type="Texture2D" uid="uid://bxjgo1vp6fywe" path="res://Art/Characters/Restart.png" id="3_07fm7"]
-[ext_resource type="Texture2D" uid="uid://dtyj8rtb3luwo" path="res://Art/Characters/Quit.png" id="4_pcrt7"]
-[ext_resource type="FontFile" uid="uid://bdoakfwvc55vs" path="res://assets/04B_30__.TTF" id="5_d14vo"]
-[ext_resource type="AudioStream" uid="uid://dt6abfvcjh3gf" path="res://Audio/HappyJingle.mp3" id="7_ql0k0"]
+[ext_resource type="Texture2D" uid="uid://2rtiw8u26vii" path="res://assets/UI/button_rectangle_depth_line.png" id="2_w7ahu"]
+[ext_resource type="Texture2D" uid="uid://bpvgkcrurgc86" path="res://Art/Characters/Restart.png" id="3_07fm7"]
+[ext_resource type="Texture2D" uid="uid://dc7s6m7p17e4k" path="res://Art/Characters/Quit.png" id="4_pcrt7"]
+[ext_resource type="FontFile" uid="uid://d4afo47fml43o" path="res://assets/04B_30__.TTF" id="5_d14vo"]
+[ext_resource type="AudioStream" uid="uid://cqpkuqks86ynw" path="res://Audio/HappyJingle.mp3" id="7_ql0k0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvdct"]
 
@@ -32,6 +32,8 @@ offset_left = -19.0
 offset_top = 288.0
 offset_right = 185.0
 offset_bottom = 406.0
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 1
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xvdct")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xvdct")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_xvdct")
@@ -69,6 +71,8 @@ offset_top = 22.0
 offset_right = 1092.0
 offset_bottom = 133.0
 theme_override_colors/font_color = Color(0.745098, 0.345098, 0, 1)
+theme_override_colors/font_outline_color = Color(0.266667, 0.184314, 0.00784314, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("5_d14vo")
 theme_override_font_sizes/font_size = 30
 text = "Congrats, 
