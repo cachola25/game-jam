@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://doofkr8gwcksj"]
+[gd_scene load_steps=7 format=3 uid="uid://doofkr8gwcksj"]
 
 [ext_resource type="Script" path="res://scripts/You.gd" id="1_y0bsv"]
 [ext_resource type="Texture2D" uid="uid://blpnty3ks5vl4" path="res://Art/Characters/You.png" id="2_ynyw1"]
 [ext_resource type="PackedScene" uid="uid://c4r6ushs3mnvy" path="res://scenes/player_dialogue.tscn" id="3_lla3m"]
-[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="4_du4yi"]
+[ext_resource type="Texture2D" uid="uid://rh1w7ucsl6y2" path="res://assets/UI/you_arrow.png" id="3_m5kg2"]
+[ext_resource type="FontFile" uid="uid://d4afo47fml43o" path="res://assets/04B_30__.TTF" id="4_du4yi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umhr3"]
 size = Vector2(15, 14.5)
@@ -21,6 +22,12 @@ shape = SubResource("RectangleShape2D_umhr3")
 position = Vector2(-2, -2)
 scale = Vector2(0.0180833, 0.0163935)
 texture = ExtResource("2_ynyw1")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(0, -21)
+scale = Vector2(0.395833, 0.416667)
+texture = ExtResource("3_m5kg2")
 
 [node name="player_dialogue" parent="." instance=ExtResource("3_lla3m")]
 z_index = 10

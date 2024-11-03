@@ -1,12 +1,12 @@
 [gd_scene load_steps=44 format=4 uid="uid://bswtp6xt8pg6q"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_hwh3g"]
-[ext_resource type="Texture2D" uid="uid://yl2m0r2e1jbi" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
-[ext_resource type="Texture2D" uid="uid://gms6n5oja04o" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
-[ext_resource type="Texture2D" uid="uid://djfiu07h2w7xa" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
-[ext_resource type="Texture2D" uid="uid://ciwybyh5mmwi1" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
-[ext_resource type="Texture2D" uid="uid://cer8dwxp67e8g" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
-[ext_resource type="Texture2D" uid="uid://bys6db5s66r0v" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
+[ext_resource type="Texture2D" uid="uid://bybq1ap2b7c7r" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_80qsc"]
+[ext_resource type="Texture2D" uid="uid://k3bngrsc8ovm" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_fqglg"]
+[ext_resource type="Texture2D" uid="uid://d0olptvdn0wox" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_7g7hs"]
+[ext_resource type="Texture2D" uid="uid://eclq5hjinept" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_sqfc3"]
+[ext_resource type="Texture2D" uid="uid://vvkh3hc7amxv" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_u84kr"]
+[ext_resource type="Texture2D" uid="uid://c8auxorxi7j1i" path="res://Art/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="7_g88l2"]
 [ext_resource type="PackedScene" uid="uid://doofkr8gwcksj" path="res://scenes/main_character.tscn" id="8_s1j23"]
 [ext_resource type="PackedScene" uid="uid://b1nusu7rguvr5" path="res://scenes/family_members/grandpa.tscn" id="9_0vo5f"]
 [ext_resource type="PackedScene" uid="uid://cghqgxmvroxw1" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
@@ -14,18 +14,18 @@
 [ext_resource type="PackedScene" uid="uid://y70w4mgya087" path="res://scenes/family_members/boy_cousin.tscn" id="9_iw5qa"]
 [ext_resource type="PackedScene" uid="uid://cr1ax7dt2173n" path="res://scenes/family_members/brother.tscn" id="9_pnfjp"]
 [ext_resource type="PackedScene" uid="uid://ct14xtxpobaie" path="res://scenes/family_members/uncle.tscn" id="9_vtbma"]
-[ext_resource type="AudioStream" uid="uid://caw5rrw08jrod" path="res://Audio/Chatter.mp3" id="10_wndwr"]
+[ext_resource type="AudioStream" uid="uid://c3ytqqlhjorcs" path="res://Audio/Chatter.mp3" id="10_wndwr"]
 [ext_resource type="PackedScene" uid="uid://bdsow0c2c04ld" path="res://scenes/family_members/aunt.tscn" id="12_uf4tb"]
 [ext_resource type="PackedScene" uid="uid://c46rt7pokvoxn" path="res://scenes/family_members/girl_cousin.tscn" id="14_ncyia"]
 [ext_resource type="PackedScene" uid="uid://chacy0r45g5np" path="res://scenes/family_members/grandma.tscn" id="15_sduck"]
 [ext_resource type="PackedScene" uid="uid://bga1xfdps0aym" path="res://scenes/family_members/sister.tscn" id="18_6bw5m"]
 [ext_resource type="PackedScene" uid="uid://ga45jmyo4haq" path="res://scenes/family_members/Dog.tscn" id="19_2c8ty"]
-[ext_resource type="Texture2D" uid="uid://iki4mrgpdtc3" path="res://assets/UI/input_square.png" id="19_yiyqn"]
-[ext_resource type="PackedScene" path="res://scripts/meal.tscn" id="20_2qdu5"]
+[ext_resource type="Texture2D" uid="uid://bdweixblydqoi" path="res://assets/UI/input_square.png" id="19_yiyqn"]
+[ext_resource type="PackedScene" uid="uid://b2ibdj33setdr" path="res://scripts/meal.tscn" id="20_2qdu5"]
 [ext_resource type="PackedScene" uid="uid://cjsyw68icqeh" path="res://scenes/family_members/Cat.tscn" id="20_e6jlc"]
-[ext_resource type="FontFile" uid="uid://dxs543muaribv" path="res://assets/04B_30__.TTF" id="20_urtj6"]
-[ext_resource type="PackedScene" uid="uid://gmiprxo5nyr2" path="res://scripts/food.tscn" id="21_kvr8g"]
-[ext_resource type="PackedScene" path="res://scripts/drank.tscn" id="22_3cg5x"]
+[ext_resource type="FontFile" uid="uid://bdoakfwvc55vs" path="res://assets/04B_30__.TTF" id="20_urtj6"]
+[ext_resource type="PackedScene" uid="uid://dtiyehegxwa1g" path="res://scripts/food.tscn" id="21_kvr8g"]
+[ext_resource type="PackedScene" uid="uid://c60n80x7o3ggh" path="res://scripts/drank.tscn" id="22_3cg5x"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_xgnpd"]
 vertices = PackedVector2Array(69, 244.453, 119.992, 241.617, 119.07, 251.82, 69, 285.18, 694.211, 345, 694.781, 372, 12.0938, 372, 678.469, 345, 12.8984, 284.172, 199.32, 253.141, 201.352, 241.938, 328, 241.062, 328, 258.906, 674.461, 261.906)
@@ -1782,7 +1782,7 @@ polygon = PackedVector2Array(212, 320, 212, 327, 214, 328, 235, 328, 236, 327, 2
 [node name="Couch 3" type="StaticBody2D" parent="Layer4"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer4/Couch 3"]
-polygon = PackedVector2Array(205, 352, 203, 352, 201, 352, 200, 352, 200, 358, 201, 359, 201, 364, 203, 364, 206, 364, 209, 364, 214, 364, 220, 364, 228, 364, 236, 364, 238, 364, 240, 364, 241, 364, 243, 364, 244, 364, 245, 364, 246, 364, 247, 364, 247, 364, 248, 364, 248, 359, 249, 359, 249, 352, 246, 352, 245, 352, 244, 352, 242, 352, 239, 352, 234, 352, 230, 352, 226, 352, 222, 352, 218, 352, 214, 352, 211, 352, 208, 352)
+polygon = PackedVector2Array(205, 352, 203, 352, 201, 352, 200, 352, 200, 358, 201, 359, 201, 361, 248, 361, 248, 359, 249, 359, 249, 352, 246, 352, 211, 352)
 
 [node name="Stereo stuff" type="StaticBody2D" parent="Layer4"]
 
@@ -1853,7 +1853,7 @@ polygon = PackedVector2Array(112, 302, 112, 330, 114, 330, 113, 337, 115, 337, 1
 [node name="Couch S" type="StaticBody2D" parent="Layer5"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer5/Couch S"]
-polygon = PackedVector2Array(154, 352, 150, 352, 146, 352, 144, 352, 144, 358, 146, 358, 146, 364, 149, 364, 154, 364, 160, 364, 165, 364, 167, 364, 172, 364, 175, 364, 175, 359, 176, 359, 176, 352, 172, 352, 168, 352, 162, 352, 157, 352)
+polygon = PackedVector2Array(146, 352, 144, 352, 144, 358, 146, 358, 146, 361, 175, 361, 175, 359, 176, 359, 176, 352, 162, 352)
 
 [node name="Side Table" type="StaticBody2D" parent="Layer5"]
 
@@ -1878,7 +1878,7 @@ polygon = PackedVector2Array(347, 243, 340, 243, 340, 240, 342, 240, 343, 231, 3
 [node name="Chairs Dining" type="StaticBody2D" parent="Layer5"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer5/Chairs Dining"]
-polygon = PackedVector2Array(452, 325, 451, 324, 449, 324, 448, 325, 448, 336, 449, 336, 449, 345, 450, 346, 450, 352, 462, 352, 464, 352, 464, 356, 465, 357, 465, 367, 467, 367, 468, 366, 468, 361, 477, 367, 527, 367, 528, 347, 531, 352, 543, 353, 543, 291, 539, 291, 533, 291, 529, 291, 529, 345, 527, 345, 462, 345, 462, 334, 462, 333, 456, 333, 455, 334, 452, 334)
+polygon = PackedVector2Array(452, 325, 451, 324, 449, 324, 448, 325, 448, 336, 449, 336, 449, 345, 450, 346, 450, 346, 463, 346, 464, 352, 464, 356, 465, 357, 467, 359, 527, 359, 528, 347, 531, 345, 543, 343, 543, 291, 539, 291, 533, 291, 529, 291, 529, 345, 527, 345, 462, 345, 462, 334, 462, 333, 456, 333, 455, 334, 452, 334)
 
 [node name="Ironing Board" type="StaticBody2D" parent="Layer5"]
 
