@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4r6ushs3mnvy"]
+[gd_scene load_steps=5 format=3 uid="uid://c4r6ushs3mnvy"]
 
 [ext_resource type="Script" path="res://scripts/player_dialogue.gd" id="1_rmp0h"]
-[ext_resource type="Texture2D" uid="uid://iki4mrgpdtc3" path="res://assets/UI/input_square.png" id="1_rr7me"]
+[ext_resource type="Texture2D" uid="uid://blvt1vujemmw5" path="res://assets/UI/input_square.png" id="1_rr7me"]
+[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="3_hq0kf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cqxfi"]
 font_size = 6
@@ -38,6 +39,7 @@ offset_left = -44.0
 offset_top = -19.0
 offset_right = 44.0
 offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("3_hq0kf")
 label_settings = SubResource("LabelSettings_cqxfi")
 autowrap_mode = 2
 
