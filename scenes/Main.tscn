@@ -1491,7 +1491,7 @@ polygon = PackedVector2Array(149, 288, 147, 288, 144, 288, 141, 288, 139, 288, 1
 [node name="Coffee Table 1" type="StaticBody2D" parent="Layer4"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer4/Coffee Table 1"]
-polygon = PackedVector2Array(148, 319, 152, 316, 168, 316, 172, 319, 172, 327, 169, 328, 169, 328, 171, 328, 170, 335, 167, 334, 167, 330, 163, 330, 160, 333, 157, 330, 154, 330, 153, 334, 150, 335, 150, 328, 148, 327)
+polygon = PackedVector2Array(148, 320, 152, 320, 172, 320, 172, 327, 171, 328, 170, 330, 167, 330, 163, 330, 157, 330, 154, 330, 150, 328, 148, 327)
 
 [node name="Couch 2" type="StaticBody2D" parent="Layer4"]
 
@@ -1501,7 +1501,7 @@ polygon = PackedVector2Array(209, 288, 207, 288, 204, 288, 200, 288, 200, 294, 2
 [node name="Coffee Table 2" type="StaticBody2D" parent="Layer4"]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Layer4/Coffee Table 2"]
-polygon = PackedVector2Array(216, 316, 213, 319, 212, 319, 212, 327, 215, 329, 215, 334, 216, 334, 217, 330, 231, 330, 231, 334, 232, 335, 234, 335, 234, 329, 236, 327, 236, 319, 232, 316)
+polygon = PackedVector2Array(212, 320, 212, 327, 215, 329, 217, 330, 231, 330, 234, 329, 236, 327, 236, 320, 223, 320)
 
 [node name="Couch 3" type="StaticBody2D" parent="Layer4"]
 
@@ -1627,7 +1627,7 @@ tile_set = SubResource("TileSet_fix5s")
 position = Vector2(411, 341)
 
 [node name="SpecialCollisions" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAMABEAAQAFAAoAAAANABEAAQAGAAoAAAAOABEAAQAHAAoAAAAPABEAAQAIAAoAAAAMABUAAQABAAoAAAANABUAAQACAAoAAAAOABUAAQADAAoAAAAPABUAAQAEAAoAAAAQABMAAQALAAAAAAAHAA8AAQAGAAcAAAAHABAAAQAGAAgAAAAHABEAAQAGAAkAAAAJABUAAAALAAoAAAAKABUAAAAMAAoAAAAIABEAAAAFAAoAAAAJABEAAAAGAAoAAAAKABEAAAAHAAoAAAALABEAAAAIAAoAAAA=")
+tile_map_data = PackedByteArray("AAAMABEAAQAFAAoAAAANABEAAQAGAAoAAAAOABEAAQAHAAoAAAAPABEAAQAIAAoAAAAMABUAAQABAAoAAAANABUAAQACAAoAAAAOABUAAQADAAoAAAAPABUAAQAEAAoAAAAQABMAAQALAAAAAAAHAA8AAQAGAAcAAAAHABAAAQAGAAgAAAAHABEAAQAGAAkAAAAJABUAAAALAAoAAAAKABUAAAAMAAoAAAAIABEAAAAFAAoAAAAJABEAAAAGAAoAAAAKABEAAAAHAAoAAAALABEAAAAIAAoAAAANABMAAAAFAAIAAAAOABMAAAAGAAIAAAAJABMAAQAFAAIAAAAKABMAAQAGAAIAAAA=")
 tile_set = SubResource("TileSet_4nv30")
 
 [node name="boy_cousin" parent="." instance=ExtResource("9_iw5qa")]
