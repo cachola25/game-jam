@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cghqgxmvroxw1" path="res://scenes/family_members/mom.tscn" id="9_6ejqo"]
 [ext_resource type="PackedScene" uid="uid://bvhqot71xpd2v" path="res://scenes/family_members/dad.tscn" id="9_duydu"]
 [ext_resource type="PackedScene" uid="uid://y70w4mgya087" path="res://scenes/family_members/boy_cousin.tscn" id="9_iw5qa"]
-[ext_resource type="PackedScene" uid="uid://b2hatv8jok3f" path="res://scenes/family_members/brother.tscn" id="9_pnfjp"]
+[ext_resource type="PackedScene" uid="uid://cr1ax7dt2173n" path="res://scenes/family_members/brother.tscn" id="9_pnfjp"]
 [ext_resource type="PackedScene" uid="uid://ct14xtxpobaie" path="res://scenes/family_members/uncle.tscn" id="9_vtbma"]
 [ext_resource type="AudioStream" uid="uid://danv4aledr3k5" path="res://Audio/Chatter.mp3" id="10_wndwr"]
 [ext_resource type="PackedScene" uid="uid://bdsow0c2c04ld" path="res://scenes/family_members/aunt.tscn" id="12_uf4tb"]

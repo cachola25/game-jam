@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvkjh3jwvrsjy"]
+[gd_scene load_steps=3 format=3 uid="uid://cvkjh3jwvrsjy"]
 
 [ext_resource type="Texture2D" uid="uid://duawfdu5obov3" path="res://assets/UI/arrow_basic_s_small.png" id="1_3vs23"]
+[ext_resource type="Texture2D" uid="uid://h461p1f0d0ty" path="res://assets/UI/icon_checkmark.png" id="2_oyvx7"]
 
 [node name="indicator" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="red_arrow" type="Sprite2D" parent="."]
 scale = Vector2(0.354167, 0.276042)
 texture = ExtResource("1_3vs23")
+
+[node name="check" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.525, 0.388889)
+texture = ExtResource("2_oyvx7")

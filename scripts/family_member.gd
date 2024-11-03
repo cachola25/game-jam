@@ -16,7 +16,8 @@ func _ready() -> void:
 	$NavigationAgent2D.connect("velocity_computed", _on_navigation_agent_2d_velocity_computed)
 	$dialogue/response_1/response_button.connect("pressed", _on_response_1_button_pressed)
 	$dialogue/response_2/response_button.connect("pressed", _on_response_2_button_pressed)
-	$indicator.visible = false
+	$indicator.get_node("red_arrow").visible = false
+	$indicator.get_node("check").visible = false
 	# Delay the initial pathfinding to allow the navigation map to synchronize
 	call_deferred("start_navigation")
 
