@@ -24,6 +24,7 @@ scale = Vector2(0.0180833, 0.0163935)
 texture = ExtResource("2_ynyw1")
 
 [node name="Arrow" type="Sprite2D" parent="."]
+z_index = 10
 position = Vector2(0, -21)
 scale = Vector2(0.395833, 0.416667)
 texture = ExtResource("3_m5kg2")
