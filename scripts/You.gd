@@ -161,8 +161,7 @@ func aunt_dialogue_options(family_npc, response, msg):
 	elif family_npc.curr_message - 1 == 3:
 		if response == "Speaking of, how's your family?":
 			msg.append("When will you actually raise your own kids?")
-			msg.append("Instead of having your friends and husband do the work for you, ")
-			msg.append("all so you can go and drink with your friends.")
+			msg.append("Instead of having your friends and husband do the work for you, all so you can go and drink with your friends.")
 			conversation_done = true
 
 func sister_dialogue_options(family_npc, response, msg):
@@ -300,13 +299,13 @@ func brother_dialogue_options(family_npc, response, msg):
 			family_npc.curr_message += 1
 	elif family_npc.curr_message - 1 == 2:
 		if response == "*Leave Convo*":
-			msg.append("Yeah, I'll keep trying build more muscle haha.")
+			msg.append("Yeah, I'll keep trying to build more muscle haha.")
 			msg.append("(*whispers*) Can't believe he bought it.")
 			conversation_done = true
 	elif family_npc.curr_message - 1 == 3:
 		if response == "I have other things to worry about.":
-			msg.append("I trying to survive with out the help of mom and dad.")
-			msg.append("I have more important things to worry about other than whatever you and sister think.")
+			msg.append("I'm trying to survive with out the help of mom and dad.")
+			msg.append("I have more important things to worry about other than whatever you and sister think of me.")
 			conversation_done = true
 			
 func cousin_m_dialogue_options(family_npc, response, msg):
@@ -315,7 +314,7 @@ func cousin_m_dialogue_options(family_npc, response, msg):
 			msg.append("I have, actually. They're pretty interesting.")
 		elif response == "No, I don't have TikTok.":
 			msg.append("No, I don't have TikTok. I think it consumes too much time.")
-		msg.append("Either way, you're on that thing too much. I'm taking it.")
+		msg.append("Either way, you're on that iPad too much. I'm taking it away.")
 	elif family_npc.curr_message - 1 == 1:
 		if response == "It's for your own good.":
 			msg.append("Too much screen time can be bad for you.")

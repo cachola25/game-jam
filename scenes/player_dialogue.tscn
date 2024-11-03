@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4r6ushs3mnvy"]
 
 [ext_resource type="Script" path="res://scripts/player_dialogue.gd" id="1_rmp0h"]
-[ext_resource type="Texture2D" uid="uid://lpbp3l4l3rp5" path="res://assets/UI/input_square.png" id="1_rr7me"]
-[ext_resource type="FontFile" uid="uid://d4afo47fml43o" path="res://assets/04B_30__.TTF" id="3_hq0kf"]
+[ext_resource type="Texture2D" uid="uid://iki4mrgpdtc3" path="res://assets/UI/input_square.png" id="1_rr7me"]
+[ext_resource type="FontFile" uid="uid://dxs543muaribv" path="res://assets/04B_30__.TTF" id="3_hq0kf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cqxfi"]
 font_size = 6
