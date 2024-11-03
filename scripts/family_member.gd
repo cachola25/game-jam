@@ -3,6 +3,7 @@ extends CharacterBody2D
 class_name family_member
 
 signal chosen_response
+signal check_if_talked_to_all
 
 const SPEED = 60
 
