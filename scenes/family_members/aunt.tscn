@@ -48,7 +48,7 @@ animation = &"walking"
 frame_progress = 0.775094
 
 [node name="indicator" parent="." instance=ExtResource("3_ral7t")]
-position = Vector2(0, -16)
+position = Vector2(0, -17)
 
 [node name="dialogue" parent="." instance=ExtResource("1_3c88u")]
 visible = false

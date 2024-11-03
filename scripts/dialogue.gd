@@ -5,7 +5,7 @@ signal done
 @onready var response_options = [$response_1,$response_2]
 
 var messages = []
-var typing_speed = .05
+var typing_speed = .03
 var read_time = 2.0
 
 var current_message = 0

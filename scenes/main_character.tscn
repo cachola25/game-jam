@@ -27,7 +27,7 @@ z_index = 10
 position = Vector2(0, -50)
 
 [node name="response_timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 1.5
 one_shot = true
 
 [node name="Label" type="Label" parent="."]
