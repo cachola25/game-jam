@@ -48,10 +48,18 @@ animation = &"walking"
 frame_progress = 0.502628
 
 [node name="indicator" parent="." instance=ExtResource("4_w6k8b")]
-position = Vector2(0, -13)
+position = Vector2(0, -17)
 
 [node name="dialogue" parent="." instance=ExtResource("2_5yo8c")]
 visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 25.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 5
+text = "Cousin Marv"
