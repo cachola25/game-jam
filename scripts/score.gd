@@ -93,7 +93,9 @@ func _on_consume_timer_timeout() -> void:
 		$Drank6.queue_free()
 	elif ate3:
 		$Drank7.queue_free()
-
+	$AddedTime.visible = true
+	$LabelTimer.start()
+	
 
 func _on_drank_3_caneat() -> void:
 	$ConsumeTimer.start()
@@ -143,3 +145,7 @@ func _on_drank_7_caneat() -> void:
 func _on_drank_7_canteat() -> void:
 	$ConsumeTimer.stop()
 	ate3 = false
+
+
+func _on_label_timer_timeout() -> void:
+	$AddedTime.visible = false

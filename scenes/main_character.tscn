@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://doofkr8gwcksj"]
 
 [ext_resource type="Script" path="res://scripts/You.gd" id="1_y0bsv"]
-[ext_resource type="Texture2D" uid="uid://1opkh8ev4ji2" path="res://Art/Characters/Main_Female.png" id="2_chiof"]
+[ext_resource type="Texture2D" uid="uid://blpnty3ks5vl4" path="res://Art/Characters/You.png" id="2_ynyw1"]
 [ext_resource type="PackedScene" uid="uid://c4r6ushs3mnvy" path="res://scenes/player_dialogue.tscn" id="3_lla3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umhr3"]
-size = Vector2(20, 17)
+size = Vector2(15, 14.5)
 
 [node name="You" type="CharacterBody2D"]
 collision_layer = 2047
@@ -13,13 +13,13 @@ collision_mask = 2047
 script = ExtResource("1_y0bsv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(-0.5, -2.25)
 shape = SubResource("RectangleShape2D_umhr3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.38419e-07, -2.98023e-08)
-scale = Vector2(0.04525, 0.0415)
-texture = ExtResource("2_chiof")
+position = Vector2(-2, -2)
+scale = Vector2(0.0180833, 0.0163935)
+texture = ExtResource("2_ynyw1")
 
 [node name="player_dialogue" parent="." instance=ExtResource("3_lla3m")]
 z_index = 10
