@@ -18,7 +18,7 @@ var messages = [
 		"You should really listen to me more often"
 	],
 	[
-		"See, this is why sister is my favorite sibling.",
+		"See, this is why Crystal is my favorite sibling.",
 		"She actually listens to the useful advice I have."
 	],
 ]
