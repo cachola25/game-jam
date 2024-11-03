@@ -41,7 +41,6 @@ func _process(delta: float) -> void:
 	if collider and collider is family_member:
 		if not collider.talked_to:
 			get_parent().clear_indicators()
-			print(collider.get_node("indicator").get_node("red_arrow"))
 			collider.get_node("indicator").get_node("red_arrow").visible = true
 	else:
 		get_parent().clear_indicators()
