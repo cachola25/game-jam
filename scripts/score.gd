@@ -33,6 +33,8 @@ func _process(delta: float) -> void:
 	if is_talking:
 		is_talking = false
 		score += 30
+		$AddedTimeNPC.visible = true
+		$LabelTimer.start()
 	if score == 0:
 		out_of_time = true
 		get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")
@@ -149,3 +151,4 @@ func _on_drank_7_canteat() -> void:
 
 func _on_label_timer_timeout() -> void:
 	$AddedTime.visible = false
+	$AddedTimeNPC.visible = false
