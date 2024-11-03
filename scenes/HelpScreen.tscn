@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://c0kkphx8astp0"]
 
 [ext_resource type="Script" path="res://scripts/HelpScreen.gd" id="1_pb1ug"]
-[ext_resource type="Texture2D" uid="uid://6j077gycg6f" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="2_05bfp"]
-[ext_resource type="Texture2D" uid="uid://bdweixblydqoi" path="res://assets/UI/input_square.png" id="3_83fwh"]
-[ext_resource type="FontFile" uid="uid://bdoakfwvc55vs" path="res://assets/04B_30__.TTF" id="4_bk743"]
-[ext_resource type="Texture2D" uid="uid://cj1wkkll6vmve" path="res://Art/Characters/Return.png" id="5_p1pvy"]
+[ext_resource type="Texture2D" uid="uid://dxkh1ap04rxig" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="2_05bfp"]
+[ext_resource type="Texture2D" uid="uid://lpbp3l4l3rp5" path="res://assets/UI/input_square.png" id="3_83fwh"]
+[ext_resource type="FontFile" uid="uid://d4afo47fml43o" path="res://assets/04B_30__.TTF" id="4_bk743"]
+[ext_resource type="Texture2D" uid="uid://cx3wa52ga7j1e" path="res://Art/Characters/Return.png" id="5_p1pvy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83u5r"]
 
