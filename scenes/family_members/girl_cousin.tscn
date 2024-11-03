@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c46rt7pokvoxn"]
+[gd_scene load_steps=10 format=3 uid="uid://c46rt7pokvoxn"]
 
 [ext_resource type="Script" path="res://scripts/family_members/girl_cousin.gd" id="1_c6kj6"]
 [ext_resource type="PackedScene" uid="uid://c3xa2a4oanlo8" path="res://scenes/dialogue.tscn" id="1_d54bw"]
-[ext_resource type="Texture2D" uid="uid://e8stb4lvy0le" path="res://Art/Characters/Custom_Characters2.png" id="2_nlcqe"]
-[ext_resource type="PackedScene" path="res://scenes/indicator.tscn" id="3_kgcsy"]
+[ext_resource type="Texture2D" uid="uid://cn52dtlr2lgqu" path="res://Art/Characters/Custom_Characters2.png" id="2_nlcqe"]
+[ext_resource type="PackedScene" uid="uid://cvkjh3jwvrsjy" path="res://scenes/indicator.tscn" id="3_kgcsy"]
+[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="5_yb4ns"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73sj5"]
 size = Vector2(15.8371, 15.9688)
@@ -47,7 +48,7 @@ animation = &"walking"
 frame_progress = 0.0682898
 
 [node name="indicator" parent="." instance=ExtResource("3_kgcsy")]
-position = Vector2(0, -18)
+position = Vector2(0, -16)
 
 [node name="dialogue" parent="." instance=ExtResource("1_d54bw")]
 visible = false
@@ -57,8 +58,10 @@ avoidance_enabled = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = -20.0
-offset_top = -15.0
-offset_right = 23.0
-offset_bottom = 8.0
-theme_override_font_sizes/font_size = 5
-text = "Cousin Gwennifer"
+offset_top = -12.0
+offset_right = 144.0
+offset_bottom = 11.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_yb4ns")
+text = "Cousin Sophia"
