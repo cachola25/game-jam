@@ -1464,7 +1464,7 @@ polygon = PackedVector2Array(0, 182, 9, 182, 58, 232, 58, 256, 0, 256)
 [node name="Wall" type="StaticBody2D" parent="Layer3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3/Wall"]
-position = Vector2(350, 107)
+position = Vector2(351, 104)
 shape = SubResource("RectangleShape2D_e8c02")
 
 [node name="Floor" type="StaticBody2D" parent="Layer3"]
@@ -1519,12 +1519,12 @@ polygon = PackedVector2Array(279, 281, 269, 281, 269, 285, 258, 285, 257, 286, 2
 [node name="Lamp" type="StaticBody2D" parent="Layer4"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer4/Lamp"]
-polygon = PackedVector2Array(120, 280, 119, 280, 116, 283, 118, 285, 122, 285, 125, 283, 122, 280)
+polygon = PackedVector2Array(118, 280, 116, 283, 118, 285, 122, 285, 125, 283, 122, 280)
 
 [node name="Stairs" type="StaticBody2D" parent="Layer4"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer4/Stairs"]
-polygon = PackedVector2Array(58, 232, 58, 247, 60, 248, 58, 250, 58, 263, 57, 264, 57, 267, 0, 267, 0, 192, 4, 192, 56, 245)
+polygon = PackedVector2Array(58, 232, 58, 247, 60, 248, 58, 250, 58, 263, 57, 264, 1, 264, 0, 192, 4, 192, 56, 245)
 
 [node name="decor 1" type="StaticBody2D" parent="Layer4"]
 
@@ -1539,7 +1539,7 @@ polygon = PackedVector2Array(32, 307, 45, 307, 45, 313, 47, 313, 47, 329, 44, 32
 [node name="Shelf 1" type="StaticBody2D" parent="Layer4"]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Layer4/Shelf 1"]
-polygon = PackedVector2Array(129, 193, 190, 193, 190, 228, 166, 228, 145, 228, 129, 228)
+polygon = PackedVector2Array(129, 193, 190, 193, 191, 232, 129, 233)
 
 [node name="Desk" type="StaticBody2D" parent="Layer4"]
 
@@ -1625,7 +1625,7 @@ tile_set = SubResource("TileSet_fix5s")
 position = Vector2(411, 341)
 
 [node name="SpecialCollisions" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAMABEAAQAFAAoAAAANABEAAQAGAAoAAAAOABEAAQAHAAoAAAAPABEAAQAIAAoAAAAMABUAAQABAAoAAAANABUAAQACAAoAAAAOABUAAQADAAoAAAAPABUAAQAEAAoAAAAQABMAAQALAAAAAAAHAA8AAQAGAAcAAAAHABAAAQAGAAgAAAAHABEAAQAGAAkAAAAJABUAAAALAAoAAAAKABUAAAAMAAoAAAAIABEAAAAFAAoAAAAJABEAAAAGAAoAAAAKABEAAAAHAAoAAAALABEAAAAIAAoAAAANABMAAAAFAAIAAAAOABMAAAAGAAIAAAAJABMAAQAFAAIAAAAKABMAAQAGAAIAAAAdABEAAQAIAAAAAAAeABEAAQAIAAAAAAAfABEAAQAIAAAAAAAgABEAAQAIAAAAAAAcABIAAQAJAAAAAAAhABIAAAAMAAEAAAAoABEAAAAAABAAAAAQABEAAQALABAAAAARABEAAQAMABAAAAAHABIAAQAAAAwAAAAIABIAAQABAAwAAAA=")
+tile_map_data = PackedByteArray("AAAMABEAAQAFAAoAAAANABEAAQAGAAoAAAAOABEAAQAHAAoAAAAPABEAAQAIAAoAAAAMABUAAQABAAoAAAANABUAAQACAAoAAAAOABUAAQADAAoAAAAPABUAAQAEAAoAAAAQABMAAQALAAAAAAAHAA8AAQAGAAcAAAAHABAAAQAGAAgAAAAHABEAAQAGAAkAAAAJABUAAAALAAoAAAAKABUAAAAMAAoAAAAIABEAAAAFAAoAAAAJABEAAAAGAAoAAAAKABEAAAAHAAoAAAALABEAAAAIAAoAAAANABMAAAAFAAIAAAAOABMAAAAGAAIAAAAJABMAAQAFAAIAAAAKABMAAQAGAAIAAAAdABEAAAAIAAAAAAAeABEAAAAIAAAAAAAfABEAAAAIAAAAAAAgABEAAAAIAAAAAAAcABIAAAAJAAAAAAAhABIAAAAMAAEAAAAoABEAAAAAABAAAAAHABIAAQAAAAwAAAAIABIAAQABAAwAAAA=")
 tile_set = SubResource("TileSet_4nv30")
 
 [node name="boy_cousin" parent="." instance=ExtResource("9_iw5qa")]

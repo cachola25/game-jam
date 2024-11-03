@@ -15,7 +15,7 @@ func _playMusicLevel():
 	_playMusic(levelMusic)
 	
 func _stopMusic(music: AudioStream, volume = 0.0):
-	queue_free()	
+	stop()
 
 func _stopMusicLevel():
 	_stopMusic(levelMusic)
