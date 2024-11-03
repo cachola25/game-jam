@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://daqms26yrmocr"]
 
 [ext_resource type="Script" path="res://scripts/EndScreen.gd" id="1_whtnr"]
-[ext_resource type="Texture2D" uid="uid://dwekqtdgk21mf" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="2_n0vbn"]
-[ext_resource type="Texture2D" uid="uid://cckqus15ja8y8" path="res://Art/Characters/Restart.png" id="3_vfwp7"]
-[ext_resource type="Texture2D" uid="uid://btlp64x5h3882" path="res://Art/Characters/Quit.png" id="4_1mo36"]
-[ext_resource type="AudioStream" uid="uid://8v84iht3ou8j" path="res://Audio/SadViolin.mp3" id="4_ff6t6"]
-[ext_resource type="FontFile" uid="uid://dxs543muaribv" path="res://assets/04B_30__.TTF" id="5_bp67t"]
+[ext_resource type="Texture2D" uid="uid://6j077gycg6f" path="res://Art/Top-Down_Retro_Interior/Title_Background.png" id="2_n0vbn"]
+[ext_resource type="Texture2D" uid="uid://bxjgo1vp6fywe" path="res://Art/Characters/Restart.png" id="3_vfwp7"]
+[ext_resource type="Texture2D" uid="uid://dtyj8rtb3luwo" path="res://Art/Characters/Quit.png" id="4_1mo36"]
+[ext_resource type="AudioStream" uid="uid://bp8t6jitw6nj8" path="res://Audio/SadViolin.mp3" id="4_ff6t6"]
+[ext_resource type="FontFile" uid="uid://bdoakfwvc55vs" path="res://assets/04B_30__.TTF" id="5_bp67t"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_23rmn"]
 
