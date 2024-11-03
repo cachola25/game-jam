@@ -29,8 +29,8 @@ texture = ExtResource("2_w7ahu")
 
 [node name="RestartButton" type="Button" parent="."]
 offset_left = -19.0
-offset_top = 298.0
-offset_right = 173.0
+offset_top = 288.0
+offset_right = 185.0
 offset_bottom = 406.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xvdct")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xvdct")
