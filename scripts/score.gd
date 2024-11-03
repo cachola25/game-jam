@@ -46,7 +46,7 @@ func _on_main_character_talk() -> void:
 	
 func clear_indicators():
 	for npc in NPCs:
-		npc.get_node("indicator").visible = false
+		npc.get_node("indicator").get_node("red_arrow").visible = false
 
 func _on_check_if_talked_to_all():
 	for npc in NPCs:

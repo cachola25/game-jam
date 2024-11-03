@@ -41,7 +41,8 @@ func _process(delta: float) -> void:
 	if collider and collider is family_member:
 		if not collider.talked_to:
 			get_parent().clear_indicators()
-			collider.get_node("indicator").visible = true
+			print(collider.get_node("indicator").get_node("red_arrow"))
+			collider.get_node("indicator").get_node("red_arrow").visible = true
 	else:
 		get_parent().clear_indicators()
 	if collider and Input.is_action_just_pressed("interact") and not talking:
@@ -336,6 +337,7 @@ func finish_conversation(family_npc):
 	talking = false
 	family_npc.talking = false
 	family_npc.talked_to = true
+	family_npc.get_node("indicator").get_node("check").visible = true
 	family_npc.emit_signal("check_if_talked_to_all")
 
 func _on_response_timer_timeout() -> void:
