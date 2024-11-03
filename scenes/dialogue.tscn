@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://c3xa2a4oanlo8"]
 
 [ext_resource type="Script" path="res://scripts/dialogue.gd" id="1_x3bad"]
-[ext_resource type="Texture2D" uid="uid://blvt1vujemmw5" path="res://assets/UI/input_square.png" id="2_x5ulu"]
-[ext_resource type="FontFile" uid="uid://cssh71udh08qx" path="res://assets/04B_30__.TTF" id="3_1ymlc"]
-[ext_resource type="Texture2D" uid="uid://d13d7hn2hjagw" path="res://assets/UI/button_rectangle_depth_line.png" id="3_ad5qx"]
-[ext_resource type="Texture2D" uid="uid://g7wnqt38elao" path="res://assets/UI/icon_play_outline.png" id="4_ic0ux"]
+[ext_resource type="Texture2D" uid="uid://iki4mrgpdtc3" path="res://assets/UI/input_square.png" id="2_x5ulu"]
+[ext_resource type="FontFile" uid="uid://dxs543muaribv" path="res://assets/04B_30__.TTF" id="3_1ymlc"]
+[ext_resource type="Texture2D" uid="uid://dvn4t6t8etuds" path="res://assets/UI/button_rectangle_depth_line.png" id="3_ad5qx"]
+[ext_resource type="Texture2D" uid="uid://huv3vwhevyul" path="res://assets/UI/icon_play_outline.png" id="4_ic0ux"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pa6md"]
 line_spacing = 1.0

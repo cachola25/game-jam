@@ -2,16 +2,19 @@ extends Node2D
 
 signal done
 
-@onready var response_options = [$response_1,$response_2]
+@onready var response_options = [$response_1, $response_2]
+@onready var talking_message = $talking/talking_message
 
 var messages = []
-var typing_speed = .03
+var typing_speed = 0.03
 var read_time = 2.0
 
 var current_message = 0
 var display = ""
 var current_char = 0
 var current_message_idx
+
+var max_lines = 3
 
 func _ready():
 	visible = false
@@ -39,11 +42,9 @@ func stop_dialogue():
 func _on_next_char_timeout():
 	if len(messages) <= 0:
 		return
-	if (current_char < len(messages[current_message])):
+	if current_char < len(messages[current_message]):
 		var next_char = messages[current_message][current_char]
-		display += next_char
-		
-		$talking/talking_message.text = display
+		add_char(next_char)
 		current_char += 1
 	else:
 		$next_char.stop()
@@ -51,10 +52,24 @@ func _on_next_char_timeout():
 		$next_message.set_wait_time(read_time)
 		$next_message.start()
 
+func add_char(char):
+	display += char
+	talking_message.text = display
+
+	# Overflow handling based on line count
+	while talking_message.get_line_count() > max_lines:
+		var words = display.split(" ")
+		if words.size() > 1:
+			words.remove_at(0)
+			display = " ".join(words)
+		else:
+			display = display.substr(1)
+		talking_message.text = display
+
 func _on_next_message_timeout():
 	if len(messages) <= 0:
 		return
-	if (current_message == len(messages) - 1):
+	if current_message == len(messages) - 1:
 		var options = get_parent().player_responses[current_message_idx]
 		var index = 0
 		for response in response_options:
@@ -63,7 +78,7 @@ func _on_next_message_timeout():
 			response.visible = true
 			response.get_node("response_text").text = options[index]
 			response.get_node("select_arrow").visible = false
-			index+=1
+			index += 1
 		stop_dialogue()
 	else: 
 		current_message += 1
@@ -71,18 +86,14 @@ func _on_next_message_timeout():
 		current_char = 0
 		$next_char.start()
 
-
 func _on_response_1_button_mouse_entered() -> void:
 	$response_1/select_arrow.visible = true
-
 
 func _on_response_1_button_mouse_exited() -> void:
 	$response_1/select_arrow.visible = false
 
-
 func _on_response_2_button_mouse_entered() -> void:
 	$response_2/select_arrow.visible = true
-
 
 func _on_response_2_button_mouse_exited() -> void:
 	$response_2/select_arrow.visible = false
